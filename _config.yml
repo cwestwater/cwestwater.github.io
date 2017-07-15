@@ -10,13 +10,13 @@ locale                   : "en-GB"
 title                    : "vGemba"
 title_separator          : "|"
 name                     : "Colin Westwater"
-description              : # "An amazing website."
+description              : "A blog about IT, Continuous Improvement, VMware, PowerShell, Automation and Careers"
 url                      : # "https://cwestwater.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : cwestwater/cwestwater.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 250
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -55,7 +55,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : cwestwater
 facebook:
   username               :
   app_id                 :
@@ -91,7 +91,7 @@ author:
   foursquare       :
   github           : cwestwater
   gitlab           :
-  google_plus      :
+  google_plus      : ColinWestwater
   keybase          :
   instagram        :
   lastfm           :
@@ -243,5 +243,5 @@ defaults:
       author_profile: true
       read_time: true
       comments: # true
-      share: true
+      share: # true
       related: true
