@@ -3,7 +3,6 @@ layout: single
 title: "MDT Gold Image VM Automation"
 date: 2017-02-19
 ---
-
 As part of my role I maintain and develop our Microsoft Deployment Toolkit (MDT) infrastructure. It's a fantastic tool for automating the deployment of your corporate images.
 
 One vital task is to maintain the Gold images with the latest Windows updates.  I tend to do this monthly to speed up deployments.  As part of this task I was manually creating a new VM, customising it then launching the deployment.  Non value add work!

@@ -3,7 +3,6 @@ layout: single
 title: "I'm Colin Westwater, and this is how I work"
 date: 2017-02-13
 ---
-
 ## Introduction
 I stumbled across a Github page recently called [This Is How I Work](https://github.com/adbertram/HowIWorkIT) and loved the content from the posters. The bloggers are participating in a series of posts on how they work. This is inspired from the Lifehacker How I work series. The posts detail how IT Professionals work in their role.  Find mine below.  Enjoy.
 
