@@ -25,9 +25,9 @@ I could not live without my Kindle as I read a lot and have a big backlog of tec
 
 ## What does your workspace look like?
 
-![Desk Image]({{ site.url }}/assets/images/Desk-01.jpg)
+![Desk Image]({{ site.url }}/assets/images/Desk-01.png)
 
-![Desk Image]({{ site.url }}/assets/images/Desk-02.jpg)
+![Desk Image]({{ site.url }}/assets/images/Desk-02.png)
 
 I admit I am a bit of a neat freak at work.  I just cannot work in a mess.  As part of my standard work I make sure my desk is cleared at the end of each day and the office is left to a set standard at the end of the week so I come back on Monday ready to go.
 
