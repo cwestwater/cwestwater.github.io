@@ -137,4 +137,4 @@ You can then browse to the online repository in GitHub and see the same files yo
 Finally, to check it's working, browse to [https://username.github.io](https://username.github.io). The site should be live within a few minutes.
 
 ## Part 2 - Customisation
-Part 2 to follow. This will deal with customising the Minimal Mistakes Jekyll theme and adding content. Link to follow when it's live
+Part 2 to follow. This will deal with customising the Minimal Mistakes Jekyll theme and adding content. Link to follow when it's live.
