@@ -8,8 +8,12 @@ I was using Blogger as my platform for hosting this blog. It was ok but things l
 
 This will be a three part series:
 1. Part 1 - Setup
-2. Part 2 - Customisation
+2. [Part 2 - Customisation]({{ site.baseurl }}{% post_url 2017-07-17-Blog-Migration-Part-2-Customisation %})
 3. Part 3 - Workflow
+
+In this post I will show how I setup my environment, downloaded a Jekyll theme and then how to serve the site on GitHub Pages.
+
+You can view this sites raw Jekyll files on GitHub at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io)
 
 ## Bash on Windows 10
 I am a Windows guy. There I said it. When I started looking at hosting on GitHub I thought I would need to dive into Linux for using Jekyll with GitHub. I worked for a while trying to get this going, but as a Linux novice it was hard. Then on twitter I happened to notice a post from [Brian Bunke](https://www.twitter.com/brianbunke) that answered my problems. He outlined how to setup Jekyll on Windows 10 using the Bash on Ubuntu shell. The post is [Jekyll on Win10](http://www.brianbunke.com/blog/2017/05/24/jekyll-win10/). I will outline the steps from that post here but full credit to Brian.
@@ -137,4 +141,4 @@ You can then browse to the online repository in GitHub and see the same files yo
 Finally, to check it's working, browse to [https://username.github.io](https://username.github.io). The site should be live within a few minutes.
 
 ## Part 2 - Customisation
-Part 2 to follow. This will deal with customising the Minimal Mistakes Jekyll theme and adding content. Link to follow when it's live.
+[Part 2 - Customisation]({{ site.baseurl }}{% post_url 2017-07-17-Blog-Migration-Part-2-Customisation %}) deals with customising the Minimal Mistakes Jekyll theme and adding content.

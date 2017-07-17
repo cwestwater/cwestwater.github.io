@@ -13,6 +13,8 @@ This is Part 2 of a three part series:
 
 In this post I will show how I setup the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme to my preferences.
 
+You can view this sites raw Jekyll files on GitHub at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io)
+
 ## _config.yml
 This is the file that is key to a Jekyll based site.  Think of it as the master control file that can alter the site with global options. The Minimal Mistakes website has a great [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) and we will be looking at the [Configuration](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) section. Lets look at the default _config.yml file:
 
@@ -266,10 +268,10 @@ defaults:
       related: true
 ~~~
 
-As you can see there is a lot in there. Lets go through the sections I changed.
+As you can see there is a lot in there. Let's go through the sections I changed.
 
 ### Site Settings
-In the Site Setting section I set the title, name, description and repository information.  It's all pretty self explanatory.
+In the Site Setting section I set the title, name, description and repository information.  It's all pretty much self-explanatory.
 
 ### Site Author
 This is the section that populates the links on the left hand part of all pages with links to my Twitter, GitHub and Google Plus pages.  There is a pretty extensive list of options here including some I had to Google.  dribbble anyone?
@@ -283,3 +285,105 @@ Not
 
 twitter: https://twitter.com/cwestwater
 ~~~
+
+To add your picture to the left hand column, you fill in the avatar entry. You need to go to your folder structure and create an assets folder. Drop the picture you want to use as your headshot and then enter the link:
+~~~ yaml
+avatar: "/assests/images/headshoto_photo.jpg"
+~~~
+
+We will come back later to _config.yml to configure additional options.
+
+One thing to note. While Jekyll is running, looking for changes it will not process changes to _config.yml. You need to stop Jekyll and restart it to reflect changes. Note this is for _config.yml **only**, other file's changed will be caught by Jekyll on the fly.
+
+## Markdown
+I use Markdown, specifically [kramdown](https://kramdown.gettalong.org/index.html) to write content. If you don't know what Markdown is have a look at this [introduction](https://daringfireball.net/projects/markdown/basics). GitHub has a good [cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) (pdf) available.
+
+First of all, in your local username.github.io folder create a _posts folder.  Any markdown file place in there will be converted to a post. The key here is to put some YAML Front Matter at the top of the post. If you look at the end of _config.yml there is an entry:
+~~~ yml
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+~~~
+
+This controls the default options for a post. As above it uses the single layout html file in _layouts to control how the page looks. It also shows the information entered in the # Site Author part of _config.yml, how long it estimates it will take to read the post (assuming 200 words per minute), comments are disabled (true is commented out), sharing links at the bottom are enabled, and it will show any similar posts available.
+
+I have not setup commenting (again guess where that is controlled from - _config.yml) and so far, have turned off post sharing but commenting out the share: true line
+
+So when creating a post, the key is to enter these lines right at the top:
+~~~ yml
+---
+layout: single
+title: "post title"
+date: 2017-07-17
+---
+~~~
+The layout: option tells Jekyll to use single layout format. The title becomes the post title header. Finally, the date: needs to be in the format YYYY-MM-DD.  This becomes the post date. After that you can start entering your markdown content.
+
+Save the file, Jekyll will regenerate the site if it's running, and then you can see your post. If you are working on draft posts you don't want to go live with, create a _drafts folder and drop the Markdown file in there. Run Jekyll with the --drafts option and it will automatically scan the _drafts folder. By default it omits that folder.
+
+## Assets
+Sooner or later you will want to put a picture in your blog entry.  This is easy. Drop the image in the /assets/images/ folder. Then in the markdown file use:
+~~~ pandoc
+![Image Title]({{ site.url }}/assets/images/image.jpg)
+~~~
+This tells Jekyll to look at the root of the site then browse down to the /assets/images folder then find the image.jpg file. It essentially creates a link to that image and embeds it into the post.
+
+You can do this for any file type. I would recommend for instance creating an /assets/pdf/ folder for pdf's. You get the idea.
+
+## About Page
+One thing I wanted at the top of every page was a link to an About page. This was straightforward.
+
+Create a folder called _pages. At the top of the markdown file enter the following:
+~~~ yml
+---
+layout: single
+title: "About Joe Bloggs"
+permalink: /about/
+---
+~~~
+
+Next open _config.yml and in the # Default section under #posts add the new entry:
+~~~ yml
+   # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+~~~
+
+This tells Jekyll to use the single layout and add the Site Author information at the left. As it's not something I wanted the extra things like read time, comments, sharing, etc. you don't define them line for #posts
+
+Now to display that About page in the Navigation bar at the top you open /_data/navigation.yml. By default it shows a link to the Minimal Mistakes Quick-Start Guide. Comment out lines 3 and 4 to hide that. To add your about page add a new - title: and url entry. My navigation.yml file now looks like so:
+~~~ yml
+# main links
+main:
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+   - title: "About"
+     url: /about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+~~~
+
+Let Jekyll do it's thing and check. Your about page should be there.
+
+## Part 3 - Further customisation and Workflow
+We covered quite a bit in Part 2. If you are unsure of anything, the Minimal Mistakes [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) is very helpful. I would recommend reading it all. Remember you can always look at this sites files at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io). Feel free to download a copy of the files and see what I have done. If you have any questions. please reach to me.
+
+Part 3 will cover an overview of my workflow in posting a new blog entry.
