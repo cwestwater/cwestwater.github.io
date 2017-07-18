@@ -9,7 +9,7 @@ I was using Blogger as my platform for hosting this blog. It was ok but things l
 This is Part 2 of a three part series:
 1. [Part 1 - Setup]({{ site.baseurl }}{% post_url 2017-07-16-Blog-Migration-Part-1-Setup %})
 2. Part 2 - Customisation
-3. Part 3 - Workflow
+3. [Part 3 - Workflow]({{ site.baseurl }}{% post_url 2017-07-18-Blog-Migration-Part-3-Workflow %})
 
 In this post I will show how I setup the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme to my preferences.
 
@@ -383,7 +383,15 @@ main:
 
 Let Jekyll do it's thing and check. Your about page should be there.
 
+## Custom Domain
+As you can see, the URL for your sire is https://username.github.io. Usually you want a custom domain like this one. This is easy to setup in GitHub pages.
+1. Open the repostitory Settings page on the GitHub website.
+2. Browse to the GitHub pages portion. Enter your domain name in the Custom domain field and click Save ![Custom Domain]({{ site.url }}/assets/images/custom-domain.png)
+3. In your Domain DNS settings create a CNAME record and point it towards username.github.io
+
+There are slightly different instructions for different domain URLs so please look at the GitHub help [page](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
+
 ## Part 3 - Further customisation and Workflow
 We covered quite a bit in Part 2. If you are unsure of anything, the Minimal Mistakes [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) is very helpful. I would recommend reading it all. Remember you can always look at this sites files at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io). Feel free to download a copy of the files and see what I have done. If you have any questions. please reach to me.
 
-Part 3 will cover an overview of my workflow in posting a new blog entry.
+[Part 3 - Workflow]({{ site.baseurl }}{% post_url 2017-07-18-Blog-Migration-Part-3-Workflow %}) will cover an overview of my workflow in posting a new blog entry.

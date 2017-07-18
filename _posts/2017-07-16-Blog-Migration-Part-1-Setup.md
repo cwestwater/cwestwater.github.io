@@ -9,7 +9,7 @@ I was using Blogger as my platform for hosting this blog. It was ok but things l
 This will be a three part series:
 1. Part 1 - Setup
 2. [Part 2 - Customisation]({{ site.baseurl }}{% post_url 2017-07-17-Blog-Migration-Part-2-Customisation %})
-3. Part 3 - Workflow
+3. [Part 3 - Workflow]({{ site.baseurl }}{% post_url 2017-07-18-Blog-Migration-Part-3-Workflow %})
 
 In this post I will show how I setup my environment, downloaded a Jekyll theme and then how to serve the site on GitHub Pages.
 
