@@ -9,6 +9,6 @@ At the last Scottish VMUG there was a talk by [Jason Dinsdale](https://www.linke
 
 As I am studying for the VCP 6 Delta Exam, I created a PDF version of the online blueprint.
 
-You can grab it [here]({{ site.url }}/assets/pdf/2V0-621D - VMware Certified Professional 6 - Data Center Virtualization Delta Exam.pdf).
+You can grab it [here]({{ site.url }}/assets/pdf/2V0-621D.pdf).
 
 Hopefully someone out there will find it helpful!
