@@ -2,6 +2,8 @@
 layout: single
 title: "VCP6-DCV Delta Exam"
 date: 2017-03-31
+category: [VMware, Certification, Career]
+excerpt: "I passed the VCP 6 Delta Exam"
 ---
 Just a quick post.  I passed the VCP6-DCV Delta exam today.  The three study guides I used were:
 

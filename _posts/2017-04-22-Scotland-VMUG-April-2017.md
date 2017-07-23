@@ -2,6 +2,8 @@
 layout: single
 title: "Scotland VMUG April 2017"
 date: 2017-04-22
+category: [VMware, VMUG]
+excerpt: "Recap of the April 2017 Scottish VMUG"
 ---
 On Thursday 20th April 2017 the first Scotland VMUG of the year happened.  As usual, it was a great event.
 

@@ -2,6 +2,8 @@
 layout: single
 title: "MDT Gold Image VM Automation"
 date: 2017-02-19
+category: [VMware, Microsoft, MDT, PowerCLI]
+excerpt: "Use PowerCLI to build your MDT GOLD Image"
 ---
 As part of my role I maintain and develop our Microsoft Deployment Toolkit (MDT) infrastructure. It's a fantastic tool for automating the deployment of your corporate images.
 

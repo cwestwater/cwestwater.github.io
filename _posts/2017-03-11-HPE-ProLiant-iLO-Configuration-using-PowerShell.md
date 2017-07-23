@@ -2,6 +2,8 @@
 layout: single
 title: "HPE ProLiant iLO Configuration using PowerShell"
 date: 2017-03-11
+category: [Microsoft, PowerShell]
+excerpt: "Use PowerShell to configure your HPE iLO"
 ---
 We have pretty much standardised on HPE ProLiant servers.  As part of this is the useful iLO interface for out of band management. In the past we have configured the iLO's manually using the GUI. That has all changed now that HPE have iLO cmdlet's to build and manage the iLO's using PowerShell.
 

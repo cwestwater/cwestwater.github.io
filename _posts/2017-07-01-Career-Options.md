@@ -2,6 +2,8 @@
 layout: single
 title: "Career Options"
 date: 2017-07-07
+category: [Career]
+excerpt: "Inspired by Cloud Credibility - career options"
 ---
 This post has been inspired by a task on VMware's Cloud Credibility so here we go!
 

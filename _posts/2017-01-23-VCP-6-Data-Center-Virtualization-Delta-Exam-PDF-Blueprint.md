@@ -2,6 +2,8 @@
 layout: single
 title: "VCP 6 – Data Center Virtualization Delta Exam PDF Blueprint"
 date: 2017-01-23
+category: [VMware, Certification]
+excerpt: "Download a PDF of the VCP 6 Delta Exam blueprint"
 ---
 With the latest version of the VMware MyLearn website they removed the PDF versions of the blueprints for exams. I found those very helpful when studying for my VCP 5 as I could tick off what I had revised.
 
