@@ -6,8 +6,8 @@ category: [Blog]
 excerpt: "Part 1 of 3 on how I migrated this blog to GitHub Pages"
 ---
 {% include toc %}
-## Introduction
-I was using Blogger as my platform for hosting this blog. It was ok but things like adding code was a pain to format and get right. I never liked the templates that were available and the editor was pretty basic. I had heard about using GitHub for hosting your website and as I am keen to learn more about GitHub, it seemed like a good idea to see if I could migrate the blog to GitHub Pages. Turns out doing this I learn a lot of new things such as GitHub, Markdown, Jekyll, Visual Studio Code and a little Linux.
+# Introduction
+I was using Blogger as my platform for hosting this blog. It was ok but things like adding code was a pain to format and get right. I never liked the templates that were available and the editor was pretty basic. I had heard about using GitHub for hosting your website and as I am keen to learn more about GitHub, it seemed like a good idea to see if I could migrate the blog to GitHub Pages. Turns out doing this I learnt a great deal of new things such as GitHub, Markdown, Jekyll, Visual Studio Code and a little Linux.
 
 This will be a three part series:
 1. Part 1 - Setup

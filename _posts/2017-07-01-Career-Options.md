@@ -5,6 +5,7 @@ date: 2017-07-07
 category: [Career]
 excerpt: "Inspired by Cloud Credibility - career options"
 ---
+# Introduction
 This post has been inspired by a task on VMware's Cloud Credibility so here we go!
 
 ## Current Situation
