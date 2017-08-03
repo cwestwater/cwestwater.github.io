@@ -2,7 +2,7 @@
 layout: single
 title: "Free Microsoft eBooks"
 date: 2017-08-02
-category: []
+category: [Microsoft]
 excerpt: "Microsoft publish 300+ free ebooks - get them here"
 ---
 For the last few years Microsoft have published a list of free eBooks and PDF's that I have occasionally looked at. A saw on a blog post a few weeks back that it had been updated and thought I would put up a post about it. I am not sure that many people realise it's there.
