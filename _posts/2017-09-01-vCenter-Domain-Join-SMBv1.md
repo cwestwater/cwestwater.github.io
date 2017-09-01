@@ -36,7 +36,7 @@ Basically vCSA defaults to SMB1 for joining to the domain. SMB2 is supported, ju
 ~~~
 3. Restart likewise:
 ~~~ bash
-/opt/likewise/bin/lwsm restart lwio`
+/opt/likewise/bin/lwsm restart lwio
 ~~~
 
 You will now be able to join the vCSA to the domain.
