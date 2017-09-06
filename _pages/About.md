@@ -11,13 +11,14 @@ You may have noticed the title.  What is Gemba?  From Wikipedia:
 >In lean manufacturing, the idea of genba is that the problems are visible, and the best improvement ideas will come from going to the genba. The genba walk, much like Management By Walking Around (MBWA), is an activity that takes management to the front lines to look for waste and opportunities to practice genba kaizen, or practical shop floor improvement.
 
 I work for a company where we have a well ingrained Continuous Improvement culture.  Part of my daily work is is to look for incremental improvements to my work that eliminates waste.  Eliminating waste leads to time, cost and productivity savings for both you and the organisation.
+
 In this blog I will be giving ideas you can use to aid your daily work plus all the usual things IT people blog about such as VMware, Microsoft, tech news, hints and tips, etc.
 
-My name is Colin Westwater and I am a Server Administrator for a large multi-national engineering company.  
+My name is Colin Westwater and I am a Server Administrator for a large multi-national engineering company.
 
-This blog is focused on all the things that interest 
+This blog is focused on all the things that interest me.
 
-My role focuses on primarily on VMware and  Microsoft technologies but as we have a small team, and a good sized environment I am a jack of all trades.  Some of the technology I have experience of it:
+Some of the technology I have experience of it:
 
 * VMware vSphere 3.5 - 6
 * Microsoft Server NT 4 - 2012 R2
@@ -42,6 +43,6 @@ My role focuses on primarily on VMware and  Microsoft technologies but as we hav
 
 My real passions are VMware first then Microsoft Enterprise applications/technology.  I am slowly learning PowerShell as I see a need to use it.  Everyone in the Microsoft IT world needs to get PowerShell on their toolkit in my opinion.
 
-My CV is available on request
+My CV is available on request.
 
-Outside of work I have an amazing wife and daughter who keep me very busy.  Like most IT people I live for new technology and I am constantly learning about it.  My feedly RSS subscriptions are my first port of call in the day!  When I am not sitting at my computer(s) I enjoy running, cooking Barbecue, reading and following Scotland both home and away.
+Outside of work I have an amazing wife and daughter who keep me very busy.  Like most IT people I live for new technology and I am constantly learning about it.  My feedly RSS subscriptions are my first port of call in the day.  When I am not sitting at my computer(s) I enjoy running, cooking Barbecue, reading and following Scotland both home and away.
