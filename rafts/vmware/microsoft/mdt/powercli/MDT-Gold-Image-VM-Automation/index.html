@@ -1,0 +1,616 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.5.2 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>            MDT Gold Image VM Automation      vGemba      </title>
+
+
+
+
+<meta name="description" content="Use PowerCLI to build your MDT GOLD Image">
+
+
+
+
+<meta name="author" content="Colin Westwater">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="vGemba">
+<meta property="og:title" content="MDT Gold Image VM Automation">
+
+
+  <link rel="canonical" href="http://localhost:4000/vmware/microsoft/mdt/powercli/MDT-Gold-Image-VM-Automation/">
+  <meta property="og:url" content="http://localhost:4000/vmware/microsoft/mdt/powercli/MDT-Gold-Image-VM-Automation/">
+
+
+
+  <meta property="og:description" content="Use PowerCLI to build your MDT GOLD Image">
+
+
+
+  <meta name="twitter:site" content="@cwestwater">
+  <meta name="twitter:title" content="MDT Gold Image VM Automation">
+  <meta name="twitter:description" content="Use PowerCLI to build your MDT GOLD Image">
+  <meta name="twitter:url" content="http://localhost:4000/vmware/microsoft/mdt/powercli/MDT-Gold-Image-VM-Automation/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@Colin Westwater">
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-02-19T00:00:00+00:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Colin Westwater",
+      "url" : "http://localhost:4000",
+      "sameAs" : ["https://twitter.com/cwestwater"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="vGemba Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">vGemba</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Year Archive</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://localhost:4000/assets/images/bio_photo.png" class="author__avatar" alt="Colin Westwater" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Colin Westwater</h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Paisley, Scotland</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/cwestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://plus.google.com/+ColinWestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-google-plus-square" aria-hidden="true"></i> Google+
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/cwestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="MDT Gold Image VM Automation">
+    <meta itemprop="description" content="Use PowerCLI to build your MDT GOLD Image">
+    <meta itemprop="datePublished" content="February 19, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">MDT Gold Image VM Automation
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>As part of my role I maintain and develop our Microsoft Deployment Toolkit (MDT) infrastructure. It’s a fantastic tool for automating the deployment of your corporate images.</p>
+
+<p>One vital task is to maintain the Gold images with the latest Windows updates.  I tend to do this monthly to speed up deployments.  As part of this task I was manually creating a new VM, customising it then launching the deployment.  Non value add work!</p>
+
+<p>So I turned to PowerCLI to automate the creation of the VM’s for our Windows 7 and 10 Gold images.  My goal was to also make this as simple as possible so I could hand off to our Service Desk Tier II team.</p>
+
+<p>As part of that I wanted to make the script have a simple menu where the person running the script could select either Windows 7 or Windows 10. This is actually quite simple using the System.Management.Automation.Host.ChoiceDescription class in PowerShell.  There is a good TechNet article <a href="https://technet.microsoft.com/en-us/library/ff730939.aspx">here</a> on the procedure.</p>
+
+<p>So the flow of the script is as follows.</p>
+
+<p>First we need to declare our variables: the vCenter, the path to the WinPE ISO file for booting the VM into MDT, the datastore we put the VM onto, the Network and the actual host we want the VM on.</p>
+
+<p>Next we connect to vCenter, pretty straightforward.  I like giving some feedback on the console so it says if it connects or not.</p>
+
+<p>Next we create the menu. We create some variables for the menu such as the title, a description and then the three options we want to present.  These are Windows 7 GOLD Image, Windows 10 GOLD Image, and Exit. The last line of the menu portion builds the menu on screen.  Depending on the option chose the menu returns a value of 0, 1 or 2.  The script then jumps to the portion that matches this value using and If statement.</p>
+
+<p>The building of the VM for Windows 7 or 10 is pretty similar.  All that is different is the VM name and the GuestID.  First of all we check to see if there is already a VM of the same name in vCenter, Maybe we forgot to delete it after we captured the image.  I don’t bother confirming the deletion of the VM.  Next we create the VM with a CD drive, on the datastore specified in the variable, 32GB HDD, Thin provisioned, the correct GuestID, 6GB RAM, 2 CPU’s, on the Production network and on the correct host.</p>
+
+<p>If you want to specify a VMXNET3 nic you can comment out the next line.  Next we have to remove the existing CD drive, then add one back in pointing to the WinPE ISO file.</p>
+
+<p>Finally we power on the VM. It boots to the WinPE ISO file which then connects the VM to the MDT Deployment share.  I like cleaning up after myself so we disconnect from vCenter.</p>
+
+<p>The script is pretty simple, but I estimate is saves me 10-15 minutes each time I want to create an image.  Multiply that over the number of images created in a year and it’s a pretty good time saving.</p>
+
+<p>Here is the script:</p>
+
+<div class="language-posh highlighter-rouge"><pre class="highlight"><code><span class="c1">#Variables  </span>
+<span class="nv">$vCenterHost</span><span class="o">=</span><span class="s2">"XXXX"</span>  
+<span class="nv">$Win7VM</span> <span class="o">=</span> <span class="s2">"MDT-W7-GOLD"</span>  
+<span class="nv">$Win10VM</span> <span class="o">=</span> <span class="s2">"MDT-W10-GOLD"</span>  
+<span class="nv">$ISOPath</span> <span class="o">=</span> <span class="s2">"XXXX"</span>  
+<span class="nv">$vmDatastore</span> <span class="o">=</span> <span class="s2">"XXXX"</span>  
+<span class="nv">$vmNetwork</span> <span class="o">=</span> <span class="s2">"XXXX"</span>  
+<span class="nv">$vmHost</span> <span class="o">=</span> <span class="s2">"XXXX"</span>  
+  
+<span class="c1"># Connect to vCenter  </span>
+<span class="nb">Write-Host</span> -NoNewline <span class="s2">" Connecting to vCenter..."</span>  
+Connect-VIServer <span class="nv">$vCenterHost</span> -ErrorAction SilentlyContinue -WarningAction SilentlyContinue | <span class="nb">out-null  
+</span><span class="k">if</span><span class="o">(</span>!<span class="nv">$?</span><span class="o">){</span>  
+     <span class="nb">Write-Host</span> -ForegroundColor Red <span class="s2">" Could not connect to </span><span class="nv">$vCenterHost</span><span class="s2">"</span>  
+     <span class="k">exit </span>2  
+<span class="o">}</span>  
+<span class="k">else</span><span class="o">{</span>  
+     <span class="nb">Write-Host</span> <span class="s2">"Connected"</span>  
+<span class="o">}</span>  
+  
+<span class="c1">#Create Menu  </span>
+<span class="nv">$resourceTitle</span> <span class="o">=</span> <span class="s2">"MDT GOLD Image Creation"</span>  
+<span class="nv">$resourceDesc</span> <span class="o">=</span> <span class="s2">"Select either Windows 7 or Windows 10"</span>  
+<span class="nv">$win7</span> <span class="o">=</span> <span class="nb">New-Object </span>System.Management.Automation.Host.ChoiceDescription <span class="s2">"Win &amp;7"</span>, <span class="s2">"Windows 7 GOLD Image"</span>  
+<span class="nv">$win10</span> <span class="o">=</span> <span class="nb">New-Object </span>System.Management.Automation.Host.ChoiceDescription <span class="s2">"Win &amp;10"</span>, <span class="s2">"Windows 10 GOLD Image"</span>  
+<span class="nv">$exit</span> <span class="o">=</span> <span class="nb">New-Object </span>System.Management.Automation.Host.ChoiceDescription <span class="s2">"E&amp;xit"</span>, <span class="s2">"Exit to PS Prompt."</span>  
+<span class="nv">$options</span> <span class="o">=</span> <span class="o">[</span>System.Management.Automation.Host.ChoiceDescription[]]<span class="o">(</span><span class="nv">$win7</span>, <span class="nv">$win10</span>, <span class="nv">$exit</span><span class="o">)</span>  
+<span class="nv">$resourceResult</span> <span class="o">=</span> <span class="nv">$host</span>.ui.PromptForChoice<span class="o">(</span><span class="nv">$resourceTitle</span>, <span class="nv">$resourceDesc</span>, <span class="nv">$options</span>, 2<span class="o">)</span>  
+  
+<span class="c1"># Build Windows 7 VM  </span>
+<span class="k">If</span> <span class="o">(</span><span class="nv">$resourceResult</span> -eq 0<span class="o">)</span> <span class="o">{</span>  
+<span class="nv">$W7Exist</span> <span class="o">=</span> Get-VM -Name <span class="nv">$Win7VM</span> -ErrorAction SilentlyContinue  
+<span class="k">if</span> <span class="o">(</span><span class="nv">$W7Exist</span> -ne <span class="nv">$null</span><span class="o">)</span>  
+<span class="o">{</span>  
+<span class="nb">Write-Host</span> <span class="s2">"Removing existing Windows 7 VM"</span>  
+Remove-VM -deletefromdisk -VM <span class="nv">$Win7VM</span> -confirm:<span class="nv">$false</span>  
+<span class="o">}</span>  
+  
+<span class="nb">Write-Host</span> <span class="s2">"Creating new Windows 7 VM"</span>  
+New-VM -Name <span class="nv">$Win7VM</span> -CD -Datastore <span class="nv">$vmDatastore</span> -DiskGB 32 -DiskStorageFormat Thin -GuestId windows7_64Guest -MemoryGB 6 -NumCpu 2 -NetworkName <span class="nv">$vmNetwork</span> -VMHost <span class="nv">$vmHost</span> | <span class="nb">Out-Null</span>
+<span class="c1">#Get-VM $Win7VM | Get-NetworkAdapter | Set-NetworkAdapter -Type vmxnet3 -Confirm:$false | Out-Null</span>
+<span class="nv">$remcd</span> <span class="o">=</span> Get-CDDrive -VM <span class="nv">$Win7VM</span>  
+Remove-CDDrive -CD <span class="nv">$remcd</span> -Confirm:<span class="nv">$false</span>  
+New-CDDrive -VM <span class="nv">$Win7VM</span> -IsoPath <span class="nv">$ISOPath</span> -StartConnected -WarningAction SilentlyContinue | <span class="nb">Out-Null  
+Write-Host</span> <span class="s2">"Completed successfully. Created VM"</span> <span class="nv">$Win7VM</span>  
+  
+<span class="nb">Write-Host</span> <span class="s2">"Powering on VM"</span>  
+<span class="nb">Start</span>-VM -VM <span class="nv">$Win7VM</span> | <span class="nb">Out-Null  
+  
+</span>Disconnect-VIServer -Server <span class="nv">$vCenterHost</span> -Confirm:<span class="nv">$false</span>  
+<span class="nb">Write-Host</span> <span class="s2">"Disconnected from </span><span class="nv">$vCenterHost</span><span class="s2">"</span>  
+  
+<span class="k">Exit</span>  
+<span class="o">}</span>  
+  
+<span class="c1">#Build Windows 10 VM  </span>
+<span class="k">If</span> <span class="o">(</span><span class="nv">$resourceResult</span> -eq 1<span class="o">)</span> <span class="o">{</span>  
+<span class="nv">$W10Exist</span> <span class="o">=</span> Get-VM -Name <span class="nv">$Win10VM</span> -ErrorAction SilentlyContinue  
+<span class="k">if</span> <span class="o">(</span><span class="nv">$W10Exist</span> -ne <span class="nv">$null</span><span class="o">)</span>  
+<span class="o">{</span>  
+<span class="nb">Write-Host</span> <span class="s2">"Removing existing Windows 10 VM"</span>  
+Remove-VM -deletefromdisk -VM <span class="nv">$Win10VM</span> -confirm:<span class="nv">$false</span>  
+<span class="o">}</span>  
+  
+<span class="nb">Write-Host</span> <span class="s2">"Creating new Windows 10 VM"</span>  
+New-VM -Name <span class="nv">$Win10VM</span> -CD -Datastore <span class="nv">$vmDatastore</span> -DiskGB 32 -DiskStorageFormat Thin -GuestId windows8_64Guest -MemoryGB 6 -NumCpu 2 -NetworkName <span class="nv">$vmNetwork</span> -VMHost <span class="nv">$vmHost</span> | <span class="nb">Out-Null</span>
+<span class="c1">#Get-VM $Win10VM | Get-NetworkAdapter | Set-NetworkAdapter -Type vmxnet3 -Confirm:$false | Out-Null</span>
+<span class="nv">$remcd</span> <span class="o">=</span> Get-CDDrive -VM <span class="nv">$Win10VM</span>  
+Remove-CDDrive -CD <span class="nv">$remcd</span> -Confirm:<span class="nv">$false</span>  
+New-CDDrive -VM <span class="nv">$Win10VM</span> -IsoPath <span class="nv">$ISOPath</span> -StartConnected -WarningAction SilentlyContinue | <span class="nb">Out-Null  
+Write-Host</span> <span class="s2">"Completed successfully. Created VM"</span> <span class="nv">$Win10VM</span>  
+  
+<span class="nb">Write-Host</span> <span class="s2">"Powering on VM"</span>  
+<span class="nb">Start</span>-VM -VM <span class="nv">$Win10VM</span> | <span class="nb">Out-Null  
+    
+</span>Disconnect-VIServer -Server <span class="nv">$vCenterHost</span> -Confirm:<span class="nv">$false</span>  
+<span class="nb">Write-Host</span> <span class="s2">"Disconnected from </span><span class="nv">$vCenterHost</span><span class="s2">"</span>  
+  
+<span class="k">Exit</span>  
+<span class="o">}</span>  
+  
+<span class="c1"># Exit to the PowerShell Prompt  </span>
+<span class="k">If</span> <span class="o">(</span><span class="nv">$resourceResult</span> -eq 2<span class="o">)</span> <span class="o">{</span>  
+Disconnect-VIServer -Server <span class="nv">$vCenterHost</span> -Confirm:<span class="nv">$false</span>  
+<span class="nb">Write-Host</span> <span class="s2">"Disconnected from </span><span class="nv">$vCenterHost</span><span class="s2"> and exiting script"</span>  
+<span class="k">Exit</span>  
+<span class="o">}</span>  
+
+</code></pre>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#mdt" class="page__taxonomy-item" rel="tag">MDT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/categories/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/categories/#powercli" class="page__taxonomy-item" rel="tag">PowerCLI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/categories/#vmware" class="page__taxonomy-item" rel="tag">VMware</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-02-19T00:00:00+00:00">February 19, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/career/Im-Colin-Westwater-and-this-is-how-I-work/" class="pagination--pager" title="I’m Colin Westwater, and this is how I work
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/microsoft/powershell/HPE-ProLiant-iLO-Configuration-using-PowerShell/" class="pagination--pager" title="HPE ProLiant iLO Configuration using PowerShell
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/vmware/vCenter-Domain-Join-SMBv1/" rel="permalink">Disabled SMB1 and VCSA Domain Join Failure
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/guag/Glasgow-Azure-User-Group-August-2017/" rel="permalink">Glasgow Azure Users Group August 2017
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Recap of the August 2017 Glasgow Azure Users Group Meeting
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/vmware/PowerCLI-6.5.2-Update/" rel="permalink">Update to PowerCLI 6.5.2
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">POwerCLI 6.5.2 has been released. Learn how to update from 6.5.1
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/vmware/vExpert-2017/" rel="permalink">VMware vExpert 2017
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">I was awarded VMware vExpert 2017 Status!
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/cwestwater"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="http://github.com/cwestwater"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 Colin Westwater. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-102676397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,531 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.5.2 by Michael Rose
+  Copyright 2017 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>            Disabled SMB1 and VCSA Domain Join Failure      vGemba      </title>
+
+
+
+
+<meta name="description" content="STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here">
+
+
+
+
+<meta name="author" content="Colin Westwater">
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="vGemba">
+<meta property="og:title" content="Disabled SMB1 and VCSA Domain Join Failure">
+
+
+  <link rel="canonical" href="http://localhost:4000/vmware/vCenter-Domain-Join-SMBv1/">
+  <meta property="og:url" content="http://localhost:4000/vmware/vCenter-Domain-Join-SMBv1/">
+
+
+
+  <meta property="og:description" content="STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here">
+
+
+
+  <meta name="twitter:site" content="@cwestwater">
+  <meta name="twitter:title" content="Disabled SMB1 and VCSA Domain Join Failure">
+  <meta name="twitter:description" content="STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here">
+  <meta name="twitter:url" content="http://localhost:4000/vmware/vCenter-Domain-Join-SMBv1/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+    <meta name="twitter:creator" content="@Colin Westwater">
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-09-01T00:00:00+01:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Colin Westwater",
+      "url" : "http://localhost:4000",
+      "sameAs" : ["https://twitter.com/cwestwater"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="vGemba Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">vGemba</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Year Archive</a></li>
+          
+        </ul>
+        <button><div class="navicon"></div></button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="http://localhost:4000/assets/images/bio_photo.png" class="author__avatar" alt="Colin Westwater" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">Colin Westwater</h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> <span itemprop="name">Paisley, Scotland</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/cwestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://plus.google.com/+ColinWestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-google-plus-square" aria-hidden="true"></i> Google+
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/cwestwater" itemprop="sameAs">
+            <i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fa fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Disabled SMB1 and VCSA Domain Join Failure">
+    <meta itemprop="description" content="STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here">
+    <meta itemprop="datePublished" content="September 01, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Disabled SMB1 and VCSA Domain Join Failure
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>As [Ned Pyle[(https://twitter.com/nerdpyle)] from Microsoft so eloquently put it: “Stop using SMB1. Stop using SMB1. <strong>STOP USING SMB1!</strong>” If Wannacry wasn’t a wake up call to remove SMB1 from your network you need to re-evaluate that opinion.</p>
+
+<p>Anyway, I was rebuilding my lab environment at home and disabled SMB1 on all Windows servers (I played it safe and removed the feature and disabled using a GPO). I didn’t think this would be a problem until I was trying to join my vCenter Server Appliance to the domain. I just couldn’t get it to join.</p>
+
+<p>I tried through the interface which never really gave me a reason so I went to the command line. At the vCSA shell I was getting:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>vcsa:~ <span class="se">\#</span> /opt/likewise/bin/domainjoin-cli join domain.com Domain_Administrator Password
+Joining to AD Domain:   corp.contoso.com
+With Computer DNS Name: vcsa.corp.contoso.com
+
+Error: ERROR_GEN_FAILURE <span class="o">[</span>code 0x0000001f]
+</code></pre>
+</div>
+
+<p>Searching that error led me to Ned’s <a href="https://blogs.technet.microsoft.com/filecab/2017/06/01/smb1-product-clearinghouse/">SMB1 Product Clearinghouse page</a>. It’s a list of all products that require SMB1, and the vCSA is on there. The two links for the vCSA are:</p>
+<ul>
+  <li><a href="https://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;docType=kc&amp;externalId=2134063&amp;sliceId=1&amp;docTypeID=DT_KB_1_1&amp;dialogID=479220377&amp;stateId=0">VMware KB 2134063</a></li>
+  <li><a href="https://virtualizationnation.com/2017/04/17/enabling-vcenter-server-appliance-vcsa-to-use-smb2/">Enabling vCenter Server Appliance (VCSA) to use SMB2</a></li>
+</ul>
+
+<p>Basically vCSA defaults to SMB1 for joining to the domain. SMB2 is supported, just not the default. To fix this at the Shell on the vCSA:</p>
+
+<ol>
+  <li>Enable the SMB2Enabled Flag in likewise’s config:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>/opt/likewise/bin/lwregshell set_value <span class="s1">'[HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\rdr]'</span> Smb2Enabled 1
+</code></pre>
+    </div>
+  </li>
+  <li>Verify:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>/opt/likewise/bin/lwregshell list_values <span class="s1">'[HKEY_THIS_MACHINE\Services\l wio\Parameters\Drivers\rdr]'</span>
+<span class="s2">"Smb2Enabled"</span>      REG_DWORD       0x00000001 <span class="o">(</span>1<span class="o">)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Restart likewise:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>/opt/likewise/bin/lwsm restart lwio
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>You will now be able to join the vCSA to the domain.</p>
+
+<p>Hey VMware - how about updating the KB article saying the fix is to enable SMB1 which is proven to be incorrect? Thanks to <a href="https://virtualizationnation.com/">Virtualization Nation</a> for the real fix.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#vmware" class="page__taxonomy-item" rel="tag">VMware</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-01T00:00:00+01:00">September 01, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/guag/Glasgow-Azure-User-Group-August-2017/" class="pagination--pager" title="Glasgow Azure Users Group August 2017
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/guag/Glasgow-Azure-User-Group-August-2017/" rel="permalink">Glasgow Azure Users Group August 2017
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">Recap of the August 2017 Glasgow Azure Users Group Meeting
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/vmware/PowerCLI-6.5.2-Update/" rel="permalink">Update to PowerCLI 6.5.2
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">POwerCLI 6.5.2 has been released. Learn how to update from 6.5.1
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/vmware/vExpert-2017/" rel="permalink">VMware vExpert 2017
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">I was awarded VMware vExpert 2017 Status!
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/microsoft/Upcoming-Scottish-PowerShell-DevOps-User-Group/" rel="permalink">Upcoming Scottish PowerShell &amp; DevOps User Group Meeting
+</a>
+      
+    </h2>
+    
+    <p class="archive__item-excerpt" itemprop="description">There is an upcoming Scottish PowerShell &amp; DevOps User Group meeting on the 22nd August 2017
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/cwestwater"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="http://github.com/cwestwater"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2017 Colin Westwater. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-102676397-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>
