@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "WMI Filter to target a Virtual machine"
-date: 2018-08-27
+# date: 2018-08-27
 category: [VMware, Microsoft]
 excerpt: "Using a WMI filter you can easily target Virtual Machines for a GPO"
 ---
