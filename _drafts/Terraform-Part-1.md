@@ -17,6 +17,7 @@ In the case of Terraform this means using code to *declare* what we want from vS
 Terraform uses Providers to interface with the infrastructure or service you want to work with. Examples are AWS, Azure, GCP, vSphere, OpenStack, etc. It can also work with things like DNS, Chef, GitHub, and Kubernetes. There is a full list of providers [here](https://www.terraform.io/docs/providers/index.html). I am going to use the [VMware vSphere provider](https://www.terraform.io/docs/providers/vsphere/index.html) in this series of posts. I will be using Windows and vSphere 6 throughout.
 
 # Installing
+
 Terraform is incredibly simple to install. Grab the download from:
 
 https://www.terraform.io/downloads.html
@@ -30,6 +31,7 @@ choco install terraform
 ~~~
 
 # Verify Installation
+
 To verify Terraform is setup (which is pretty hard to screw up!) open a command prompt. If you have not added the path to your environment variables browse to `C:\Terrform` and run the command:
 
 ~~~ winbatch
@@ -38,6 +40,7 @@ Terraform v0.10.5
 ~~~
 
 # Visual Studio Code Setup
+
 Now of course you are using [Visual Studio Code](https://code.visualstudio.com/) right? I have moved on from Notepad to NotePad++ to the PowerShell ISE to VS Code. It's such a great product to use. One of the things that make it great is the extensions you can install to help with code syntax. Of course there is one for Terraform. From the extension page the Features at a glance are:
 
 * Syntax highlighting for .tf and .tfvars files (and .hcl)
@@ -57,6 +60,7 @@ Now of course you are using [Visual Studio Code](https://code.visualstudio.com/)
 You can install this extension in the usual ways. Either click the Install button on the page or in VS Code go to the extensions area and search for Terraform.
 
 # Wrap up
+
 So that's it, we have Terraform and Visual Studio code ready to start working. In the next part we will begin with some Terraform fundamentals.
 
 Please note this is also cross posted on the Scottish VMUG blogging site. Go check out the other great blog posts there.
