@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Terraform with vSphere - Part 1"
-# date: 2017-10-01
+date: 2017-10-01
 category: [VMware,Terraform]
 excerpt: "This is Part 1 on how to use Terraform with vSphere. Let's get Terraform setup"
 ---
@@ -36,7 +36,7 @@ To verify Terraform is setup (which is pretty hard to screw up!) open a command 
 
 ~~~ winbatch
 C:\Terraform>terrform -version
-Terraform v0.10.5
+Terraform v0.10.6
 ~~~
 
 # Visual Studio Code Setup
@@ -61,6 +61,4 @@ You can install this extension in the usual ways. Either click the Install butto
 
 # Wrap up
 
-So that's it, we have Terraform and Visual Studio code ready to start working. In the next part we will begin with some Terraform fundamentals.
-
-Please note this is also cross posted on the Scottish VMUG blogging site. Go check out the other great blog posts there.
+So that's it, we have Terraform and Visual Studio code ready to start working. In Part 2 we will begin with some Terraform fundamentals.
