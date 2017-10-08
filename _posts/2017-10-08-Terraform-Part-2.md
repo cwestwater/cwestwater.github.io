@@ -1,13 +1,13 @@
 ---
 layout: single
 title: "Terraform with vSphere - Part 2"
-# date: 2017-10-08
+date: 2017-10-08
 category: [VMware,Terraform]
 excerpt: "This is Part 2 on how to use Terraform with vSphere. Let's create a VM"
 ---
 # Introduction
 
-In Part 1 of this series we went about installing Terraform, verifying it was working and setting up Visual Studio Code. In this part we will cover some Terraform basics.
+In [Part 1]({{ site.baseurl }}{% post_url 2017-10-01-Terraform-Part-1 %}) of this series we went about installing Terraform, verifying it was working and setting up Visual Studio Code. In this part we will cover some Terraform basics.
 
 # Terraform Components
 
@@ -31,6 +31,8 @@ Terraform uses Provisioners to talk to the back end infrastructure or services l
 
 # Setup Terraform for vSphere
 
+Open up Visual Studio Code and create a new file called `main.tf` in the folder `C:\Terraform`. If you have added `C:\Terraform` to your Path environment variable save `main.tf` anywhere you like, but of course the best place for all of your Terrform files is source control...
+
 The first thing we need to do is specify the vSphere provider and use it to connect to vCenter. This is pretty easy:
 
 ~~~ ruby
@@ -44,7 +46,7 @@ provider "vsphere" {
 }
 ~~~
 
-As you can see above we are telling Terraform we are using vSphere and we pass the username, password and vCenter address. Note the username must be the full UPN not the short version. Also note if you are using self-signed certificates you have to allow Terraform the use them
+As you can see above we are telling Terraform we are using vSphere and we pass the username, password and vCenter address. Note the username must be the full UPN not the short version. Also note if you are using self-signed certificates you have to allow Terraform the use them.
 
 # Create a VM
 
@@ -129,7 +131,7 @@ disk {
 
 # Terraform Plan
 
-We can now check your code is correct by running Terraform Plan. [Terraform Plan](https://www.terraform.io/docs/commands/plan.html) shows what will happen if you apply the code without actually doing it. I think of this like the -Whatif switch in PowerShell. So if you run the plan for the code above you get:
+We can now check your code is correct by running Terraform Plan. [Terraform Plan](https://www.terraform.io/docs/commands/plan.html) shows what will happen if you apply the code without actually doing it. I think of this like the -Whatif switch in PowerShell. Open a command prompt and change directory to `C:\Terrform`  and runthe plan for the code above you get:
 
 ~~~
 C:\Terraform>terraform plan
@@ -284,7 +286,8 @@ vsphere_virtual_machine.webserver: Destruction complete after 5s
 Destroy complete! Resources: 1 destroyed.
 ~~~
 
-And our VM has been deleted in vCenter. You will be prompted to type ```yes``` to confirm you actually want to run the command.
+And our VM has been deleted in vCenter. You will be prompted to type `yes` to confirm you actually want to run the command.
 
 # Part 3
-In Part 3 we will look at using variable in the code and look at some of the files Terraform uses.
+
+In Part 3 we will look at how you can work with variables and the extra files we need to get them working.

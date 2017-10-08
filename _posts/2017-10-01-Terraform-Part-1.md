@@ -61,4 +61,4 @@ You can install this extension in the usual ways. Either click the Install butto
 
 # Wrap up
 
-So that's it, we have Terraform and Visual Studio code ready to start working. In Part 2 we will begin with some Terraform fundamentals.
+So that's it, we have Terraform and Visual Studio code ready to start working. In [Part 2]({{ site.baseurl }}{% post_url 2017-10-08-Terraform-Part-2 %}) we will begin with some Terraform fundamentals.
