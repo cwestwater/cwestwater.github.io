@@ -38,7 +38,7 @@ The first thing we need to do is specify the vSphere provider and use it to conn
 ~~~ ruby
 provider "vsphere" {
     user = "username@corp.contoso.com" # You need to use this format, not example\username
-    password = "Password"
+    password = "Password1"
     vsphere_server = "vcenter.corp.contoso.com"
 
     # If you use self-signed certificates
@@ -81,10 +81,10 @@ network_interface {
 }
 ~~~
 
-Finally we are required to define the disk. You can either specify an existing template, or in this case a new VMDK. The required arguments in this case are:
+Finally we are required to define the disk. You can either specify a VMDK, or in this case a template we have already setup. The required arguments in this case are:
 
-* name - the path and name of the new VMDK
-* size - size of disk in GB
+* datastore - the datastore the template is located in
+* template - the location of the template in the datastore
 
 Even though it's an optional argument datastore is a good one to define. If you have more than one datastore and don't define then apply the code, Terraform will error:
 
@@ -102,15 +102,23 @@ So we will define the datastore:
 
 ~~~ ruby
 disk {
-   name = "/webserver1/disk1.vmdk"
-   size = 10
    datastore = "datastore"
+   template = "MicroCore-Linux"
 }
 ~~~
 
 So lets put it all together. Observe the network and disk definitions need to go in the resource code block - they are not separate resources:
 
 ~~~ ruby
+provider "vsphere" {
+    user = "username@corp.contoso.com" # You need to use this format, not example\username
+    password = "Password1"
+    vsphere_server = "vcenter.corp.contoso.com"
+
+    # If you use self-signed certificates
+    allow_unverified_ssl = true
+}
+
 resource "vsphere_virtual_machine" "webserver" {
     name = "webserver1"
     vcpu = 1
@@ -121,9 +129,8 @@ network_interface {
 }
 
 disk {
-   name = "/webserver1/disk1.vmdk"
-   size = 10
    datastore = "datastore"
+   template = "MicroCore-Linux"
 }
 
 }
@@ -131,7 +138,7 @@ disk {
 
 # Terraform Plan
 
-We can now check your code is correct by running Terraform Plan. [Terraform Plan](https://www.terraform.io/docs/commands/plan.html) shows what will happen if you apply the code without actually doing it. I think of this like the -Whatif switch in PowerShell. Open a command prompt and change directory to `C:\Terrform`  and runthe plan for the code above you get:
+We can now check your code is correct by running Terraform Plan. [Terraform Plan](https://www.terraform.io/docs/commands/plan.html) shows what will happen if you apply the code without actually doing it. I think of this like the -Whatif switch in PowerShell. Open a command prompt and change directory to `C:\Terrform` and run the plan for the code above you get:
 
 ~~~
 C:\Terraform>terraform plan
@@ -158,9 +165,9 @@ Terraform will perform the following actions:
       disk.3339386647.iops:                   ""
       disk.3339386647.keep_on_remove:         ""
       disk.3339386647.key:                    <computed>
-      disk.3339386647.name:                   "/webserver1/disk1.vmdk"
+      disk.3339386647.name:                   ""
       disk.3339386647.size:                   "10"
-      disk.3339386647.template:               ""
+      disk.3339386647.template:               "MicroCore-Linux"
       disk.3339386647.type:                   "eager_zeroed"
       disk.3339386647.uuid:                   <computed>
       disk.3339386647.vmdk:                   ""
@@ -217,9 +224,9 @@ vsphere_virtual_machine.webserver: Creating...
   disk.3339386647.iops:                   "" => ""
   disk.3339386647.keep_on_remove:         "" => ""
   disk.3339386647.key:                    "" => "<computed>"
-  disk.3339386647.name:                   "" => "/Terraform/linux.vmdk"
+  disk.3339386647.name:                   "" => ""
   disk.3339386647.size:                   "" => "1"
-  disk.3339386647.template:               "" => ""
+  disk.3339386647.template:               "" => "MicroCore-Linux"
   disk.3339386647.type:                   "" => "eager_zeroed"
   disk.3339386647.uuid:                   "" => "<computed>"
   disk.3339386647.vmdk:                   "" => ""
@@ -290,4 +297,4 @@ And our VM has been deleted in vCenter. You will be prompted to type `yes` to co
 
 # Part 3
 
-In Part 3 we will look at how you can work with variables and the extra files we need to get them working.
+In Part 3 will look at how you can work with variables and the extra files we need to get them working.
