@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Terraform with vSphere - Part 3"
-# date: 2017-10-12
+date: 2017-10-12
 category: [VMware,Terraform]
 excerpt: "This is Part 3 on how to use Terraform with vSphere. Let's look at using Variables with Terraform"
 ---
