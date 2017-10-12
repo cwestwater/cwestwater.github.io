@@ -297,4 +297,4 @@ And our VM has been deleted in vCenter. You will be prompted to type `yes` to co
 
 # Part 3
 
-In Part 3 will look at how you can work with variables and the extra files we need to get them working.
+In [Part 3]({{ site.baseurl }}{% post_url 2017-10-12-Terraform-Part-3 %}) will look at how you can work with variables and the extra files we need to get them working.
