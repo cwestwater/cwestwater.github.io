@@ -11,7 +11,7 @@ We have barely scratched the surface with Terraform. It is a very powerful piece
 
 I first started playing with Terraform after watching [Nick Colyer's](https://twitter.com/vnickc) excellent Pluralsight course [Automating AWS and vSphere with Terraform](https://www.pluralsight.com/courses/terraform-automating-aws-vsphere). It gives good demo driven examples similar to what I have shown in this series but goes further by delving into Modules, local provisoners, remote provisioners, etc. If you have Pluralsight access go check it out.
 
-I also found this series of posts from [Gruntwork](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c) to be excellent. They have actually converted them into a book called [Terraform: Up & Running](https://www.terraformupandrunning.com/?ref=gruntwork-blog-comprehensive-terraform) so you should go check it out.
+I also found this series of posts from [Gruntwork](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c) to be excellent. The posts have actually been converted into a book called [Terraform: Up & Running](https://www.terraformupandrunning.com/?ref=gruntwork-blog-comprehensive-terraform) so you should go check it out.
 
 Finally I also found these posts to be helpful:
 
