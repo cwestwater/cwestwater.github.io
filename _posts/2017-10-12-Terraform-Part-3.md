@@ -90,14 +90,11 @@ var.vcenter
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
-
-
-------------------------------------------------------------------------
 ~~~
 
 I've snipped the above. You can see we were prompted for the details. A step backwards you would rightly think!
 
-# terraform.tfvars file
+# terraform.tfvars File
 
 We should place our actual variable values in a file called ```terraform.tfvars```. If a file called exactly that is in the same folder as our code file and the variables file, Terraform will auto load the ```terraform.tfvars``` file and use the value in it.
 
