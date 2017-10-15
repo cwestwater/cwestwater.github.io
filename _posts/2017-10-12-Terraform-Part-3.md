@@ -119,4 +119,4 @@ Now as I am sure you are storing your Terraform files in source control such as 
 Of course I have done something simple here and just changed the connection information to vSphere into variables. You can do much more such as making the datastore name we are using, the VM name, the template, etc. into variables. Have a look at the [documentation](https://www.terraform.io/intro/getting-started/variables.html) for more information. I have given you the building blocks, you can decide how to use them.
 
 # Part 4
-In the wrap up post I will point you in the direction of some great resources for learning more about Terraform.
+In the wrap up [Part 4]({{ site.baseurl }}{% post_url 2017-10-15-Terraform-Part-4 %}) I will point you in the direction of some great resources for learning more about Terraform.
