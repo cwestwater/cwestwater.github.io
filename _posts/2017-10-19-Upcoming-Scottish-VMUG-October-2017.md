@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Upcoming Sottish VMUG - 26th October 2017"
+title: "Upcoming Scottish VMUG - 26th October 2017"
 # date: 2017-10-19
 category: [VMUG,VMware]
 excerpt: "There is an upcoming Scottish VMware User Group meeting on the 26th October 2017"
