@@ -7,6 +7,7 @@ excerpt: "Part 2 of 3 on how I migrated this blog to GitHub Pages"
 ---
 {% include toc %}
 # Introduction
+
 I was using Blogger as my platform for hosting this blog. It was ok but things like adding code was a pain to format and get right. I never liked the templates that were available and the editor was pretty basic. I had heard about using GitHub for hosting your website and as I am keen to learn more about GitHub, it seemed like a good idea to see if I could migrate the blog to GitHub Pages. Turns out doing this I learn a lot of new things such as GitHub, Markdown, Jekyll, Visual Studio Code and a little Linux.
 
 This is Part 2 of a three part series:
@@ -19,6 +20,7 @@ In this post I will show how I setup the [Minimal Mistakes](https://mmistakes.gi
 You can view this sites raw Jekyll files on GitHub at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io)
 
 ## _config.yml
+
 This is the file that is key to a Jekyll based site.  Think of it as the master control file that can alter the site with global options. The Minimal Mistakes website has a great [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) and we will be looking at the [Configuration](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) section. Lets look at the default _config.yml file:
 
 ~~~ yml
@@ -274,9 +276,11 @@ defaults:
 As you can see there is a lot in there. Let's go through the sections I changed.
 
 ### Site Settings
+
 In the Site Setting section I set the title, name, description and repository information.  It's all pretty much self-explanatory.
 
 ### Site Author
+
 This is the section that populates the links on the left hand part of all pages with links to my Twitter, GitHub and Google Plus pages.  There is a pretty extensive list of options here including some I had to Google.  dribbble anyone?
 
 The tip here is to not enter the full link for say your Twitter page, just enter the usernames:
@@ -299,6 +303,7 @@ We will come back later to _config.yml to configure additional options.
 One thing to note. While Jekyll is running, looking for changes it will not process changes to _config.yml. You need to stop Jekyll and restart it to reflect changes. Note this is for _config.yml **only**, other file's changed will be caught by Jekyll on the fly.
 
 ## Markdown
+
 I use Markdown, specifically [kramdown](https://kramdown.gettalong.org/index.html) to write content. If you don't know what Markdown is have a look at this [introduction](https://daringfireball.net/projects/markdown/basics). GitHub has a good [cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf) (pdf) available.
 
 First of all, in your local username.github.io folder create a _posts folder.  Any markdown file place in there will be converted to a post. The key here is to put some YAML Front Matter at the top of the post. If you look at the end of _config.yml there is an entry:
@@ -335,6 +340,7 @@ The layout: option tells Jekyll to use single layout format. The title becomes t
 Save the file, Jekyll will regenerate the site if it's running, and then you can see your post. If you are working on draft posts you don't want to go live with, create a _drafts folder and drop the Markdown file in there. Run Jekyll with the --drafts option and it will automatically scan the _drafts folder. By default it omits that folder.
 
 ## Assets
+
 Sooner or later you will want to put a picture in your blog entry.  This is easy. Drop the image in the /assets/images/ folder. Then in the markdown file use:
 ~~~ pandoc
 ![Image Title]({{ site.url }}/assets/images/image.jpg)
@@ -344,6 +350,7 @@ This tells Jekyll to look at the root of the site then browse down to the /asset
 You can do this for any file type. I would recommend for instance creating an /assets/pdf/ folder for pdf's. You get the idea.
 
 ## About Page
+
 One thing I wanted at the top of every page was a link to an About page. This was straightforward.
 
 Create a folder called _pages. At the top of the markdown file enter the following:
@@ -387,7 +394,8 @@ main:
 Let Jekyll do it's thing and check. Your about page should be there.
 
 ## Custom Domain
-As you can see, the URL for your sire is https://username.github.io. Usually you want a custom domain like this one. This is easy to setup in GitHub pages.
+
+As you can see, the URL for your site is https://username.github.io. Usually you want a custom domain like this one. This is easy to setup in GitHub pages.
 1. Open the repostitory Settings page on the GitHub website.
 2. Browse to the GitHub pages portion. Enter your domain name in the Custom domain field and click Save ![Custom Domain]({{ site.url }}/assets/images/custom-domain.png)
 3. In your Domain DNS settings create a CNAME record and point it towards username.github.io
@@ -395,6 +403,7 @@ As you can see, the URL for your sire is https://username.github.io. Usually you
 There are slightly different instructions for different domain URLs so please look at the GitHub help [page](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)
 
 ## Part 3 - Further customisation and Workflow
+
 We covered quite a bit in Part 2. If you are unsure of anything, the Minimal Mistakes [Quick-Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) is very helpful. I would recommend reading it all. Remember you can always look at this sites files at [cwestwater/cwestwater.github.io](https://github.com/cwestwater/cwestwater.github.io). Feel free to download a copy of the files and see what I have done. If you have any questions. please reach to me.
 
 [Part 3 - Workflow]({{ site.baseurl }}{% post_url 2017-07-18-Blog-Migration-Part-3-Workflow %}) will cover an overview of my workflow in posting a new blog entry.
