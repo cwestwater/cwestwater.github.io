@@ -23,7 +23,7 @@ Delete extra hardware
 Boot to BIOS and remove legacy hardware
 
 ## OS Installation
-Add PVSCI Driver for HDD
+
 VMware Tools
 
 ## OS Configuration
