@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Patching a Standalone ESXi Host"
-# date: YYYY-MM-DD
+date: 2018-01-14
 category: [VMware]
 excerpt: "How to patch a ESXi host when VUM isn't available"
 ---
