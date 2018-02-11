@@ -42,3 +42,7 @@ Basically vCSA defaults to SMB1 for joining to the domain. SMB2 is supported, ju
 You will now be able to join the vCSA to the domain.
 
 Hey VMware - how about updating the KB article saying the fix is to enable SMB1 which is proven to be incorrect? Thanks to [Virtualization Nation](https://virtualizationnation.com/) for the real fix.
+
+# Update 13th November 2017
+
+This is an update to the original post contents above. As of vCenter Server 6.0 Update 3c SMB2 is supported without the modifications above. See the [release notes here](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-vcenter-server-60u3c-release-notes.html).
