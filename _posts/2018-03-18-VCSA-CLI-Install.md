@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "vCenter Server Appliance CLI Install"
-# date: YYYY-MM-DD
+date: 2018-03-18
 category: [VMware]
 excerpt: "How to install the vCSA using the CLI Install and json file"
 ---
