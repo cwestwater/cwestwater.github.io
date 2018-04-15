@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "ESXi CLI Upgrade"
-date: 2018-04-08
+# date: 2018-04-08
 category: [VMware]
 excerpt: "How to upgrade a host using esxcli"
 ---
