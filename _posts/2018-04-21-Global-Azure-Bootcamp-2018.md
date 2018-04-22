@@ -16,7 +16,7 @@ The first talk was from [Gregor Suttie](https://twitter.com/gregor_suttie) on hi
 Some top tips from Gregor were:
 
 * Make sure you look at the blueprint on a regular basis. It is always changing
-* Microsoft offer a free 30 day, £150 credit in Azure. You can use multiple email addresses at the end of each trial to keep learning
+* Microsoft offer a [free 30 day, £150 credit](https://azure.microsoft.com/en-gb/free/) in Azure. You can use multiple email addresses at the end of each trial to keep learning
 * Pluralsight have a number of [free videos](https://azure.microsoft.com/en-gb/training/free-online-courses/)
 * [Azure Friday](https://channel9.msdn.com/Shows/Azure-Friday) videos
 * [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) has lots of free stuff
