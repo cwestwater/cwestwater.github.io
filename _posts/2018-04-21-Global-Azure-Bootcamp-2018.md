@@ -44,4 +44,4 @@ What stuck in my head from the presentation was with Azure stack we don't need t
 
 ## Conclusion
 
-This was a really useful event for me. It gave me some great pointers on getting started in Azure and it's always enjoyable to hear people who are passionate about technology speak. Thanks to Sarah for organising, the sponsors and Microsoft for lunch. Thanks to Kenny too for bringing a VR headset and letting us try it. Hopefully it will be back in 2019.
+This was a really useful event for me. It gave me some great pointers on getting started in Azure and it's always enjoyable to hear people who are passionate about technology speak. Thanks to Sarah for organising, the sponsors ([Redgate](https://www.red-gate.com/), [elmah.io](https://elmah.io/), [Servent](https://www.servent.co.uk/)) and Microsoft for lunch. Hopefully it will be back in 2019.
