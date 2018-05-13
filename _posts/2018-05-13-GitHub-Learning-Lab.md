@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "GitHub Learning Lab"
-2018-05-13
+date: 2018-05-13
 category: [GitHub]
 excerpt: "GitHub release a tool for learning GitHub."
 ---
