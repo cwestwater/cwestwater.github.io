@@ -23,7 +23,7 @@ So far there are five lessons available:
 
 In the Introduction to GitHub lesson you learn about:
 
-![Introduction to GitHub]({{ site.url }}/assets/images/Intro-to-GitHub.png)
+![Introduction to GitHub]({{ site.url }}/assets/images/Intro-To-GitHub.png)
 
 You can see you learn the basics of the main things in Git/GitHub like issues, branching, pull requests, etc.
 
@@ -31,13 +31,13 @@ You can see you learn the basics of the main things in Git/GitHub like issues, b
 
 Once you start the lab, the bot creates a new repository for you and immediately creates an issue. The bot interacts with you by creating issues and commenting on pull requests. You can see an example of this here:
 
-![Introduction to GitHub Issue]({{ site.url }}/assets/images/Intro-to-GitHub-Issue.png)
+![Introduction to GitHub Issue]({{ site.url }}/assets/images/Intro-To-GitHub-Assign.png)
 
 You can see there is an issue created called `Getting Started with GitHub` and the bot has commented explaining what you are going to learn and what it wants you to do to progress. In the example above it begins explaining what GitHub is and how to use issues. Notice you can expand sections to get more information and there are even videos available too.
 
 The very first thing I needed to do was assign the issue to myself. Once I did this within a few seconds the bot recognised this and added a new comment to the issue:
 
-![Introduction to GitHub Assign]({{ site.url }}/assets/images/Intro-to-GitHub-Assign.png)
+![Introduction to GitHub Assign]({{ site.url }}/assets/images/Intro-To-GitHub-Issue.png)
 
 You then follow the course through to completion.
 
