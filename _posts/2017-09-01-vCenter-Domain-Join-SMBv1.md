@@ -5,7 +5,7 @@ date: 2017-09-01
 category: [VMware]
 excerpt: "STOP using SMB1 - but this breaks joining a vCenter Server Appliance to a domain. Fix it here"
 ---
-As [Ned Pyle[(https://twitter.com/nerdpyle)] from Microsoft so eloquently put it: "Stop using SMB1. Stop using SMB1. **STOP USING SMB1!**" If Wannacry wasn't a wake up call to remove SMB1 from your network you need to re-evaluate that opinion.
+As [Ned Pyle](https://twitter.com/nerdpyle) from Microsoft so eloquently put it: "Stop using SMB1. Stop using SMB1. **STOP USING SMB1!**" If Wannacry wasn't a wake up call to remove SMB1 from your network you need to re-evaluate that opinion.
 
 Anyway, I was rebuilding my lab environment at home and disabled SMB1 on all Windows servers (I played it safe and removed the feature and disabled using a GPO). I didn't think this would be a problem until I was trying to join my vCenter Server Appliance to the domain. I just couldn't get it to join.
 
