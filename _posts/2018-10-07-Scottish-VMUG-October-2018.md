@@ -2,7 +2,7 @@
 layout: single
 title: "Scottish VMUG October 2018"
 date: 2018-10-07
-category: [VMware, VMUG]
+category: [VMware, VMUG, Blogtober2018]
 excerpt: "Recap of the October 2018 Scottish VMUG"
 ---
 # Introduction
