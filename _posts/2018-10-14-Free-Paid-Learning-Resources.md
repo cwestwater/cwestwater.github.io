@@ -13,13 +13,13 @@ As IT professionals we are always learning. I thought I would highlight some fre
 
 [vBrownbag](https://vbrownbag.com/) is a community driven website and [YouTube Channel](https://www.youtube.com/channel/UCaZf13iWhwnBdpIkrEmHLbA) that provides weekly webcasts that teach new skills in under an hour. Topics have included certification tracks, automation, Cloud, careers, VMware technologies, Docker, networking, etc.
 
-They also do Community sessions & recordings at VMworld which are excellent. They provide a great opportunity for community members who did not get to speak at the full conference a way to present a topic. For instance at VMworld US 2018 we had recording such as the vExpert Daily, Powershell, Blogging, and many others.
+They also do Community sessions & recordings at VMworld which are excellent. They provide a great opportunity for community members who did not get to speak at the full conference a way to present a topic. For instance at VMworld US 2018 we had recordings such as the vExpert Daily, Powershell, Blogging, and many others.
 
 I have [presented]({{ site.baseurl }}{% post_url 2018-01-01-Terraform-vSphere-vBrownBag %}) on Terraform and it was a great experience. If you have an idea for a talk reach out to the vBrownbag Team.
 
 ## Skylines Academy - Paid
 
-A recent newcomer to the on demand video training model is [Skylines Academy](https://www.skylinesacademy.com/). This has been started by [Nick Colyer](https://twitter.com/vNickC) and focuses on Azure training. The courses are low cost and once you purchase them you receive lifetime updates on them.
+A recent newcomer to the on demand video training model is [Skylines Academy](https://www.skylinesacademy.com/). This has been started by [Nick Colyer](https://twitter.com/vNickC) and focuses on Azure training. The courses are low cost and once you purchase them you receive lifetime updates.
 
 Courses include 70-533 ($49), AZ-100 ($25), Getting Started with Terraform on Azure ($19). Great prices for great content. Watch out on their [Twitter](https://twitter.com/SkylinesAcademy) as they often have discount codes. I originally bought the 70-533 course but once Microsoft replaced it with AZ-100 Skylines gave me that course for free. An excellent move by them.
 
@@ -54,7 +54,7 @@ There is so much great free content available on YouTube. There are so many chan
 
 ## Pluralsight - Paid
 
-[Pluralsight](https://www.pluralsight.com/browse) are one of the biggest and best paid for training providers online. They have thousands of courses available in various 'tracks' such as IP Ops, Information & Cyber sSecurity, Data Professional, and Software Development.
+[Pluralsight](https://www.pluralsight.com/browse) are one of the biggest and best paid for training providers online. They have thousands of courses available in various 'tracks' such as IP Ops, Information & Cyber Security, Data Professional, and Software Development.
 
 The courses are of very high quality from well known people in the IT community. Plans start at $35 a month/$299 annual but there are premium options that give access to additional features such as certification practice exams. I have personally paid out of my own pocket for a subscription as I thought it was well worth it.
 
