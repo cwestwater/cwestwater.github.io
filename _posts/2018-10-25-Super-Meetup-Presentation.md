@@ -7,9 +7,9 @@ excerpt: "My presentation at the October SQL/Azure/PowerShell Super Meetup"
 ---
 # Introduction
 
-On the 24th October 2018 the Glasgow Azure, SQL, and Scottish PowerShell & DevOps User Groups had a joint Super Meetup.
+On the 24th October 2018 the [Glasgow Azure User Group](https://gaug.co.uk/), [Glasgow SQL User Group](https://sqlglasgow.co.uk/), and the [Scottish PowerShell & DevOps User Group](https://psdevopsug.scot/) had a joint Super Meetup.
 
-Thanks to [Sarah Lean](https://twitter.com/TechieLass) of the Azure group I was asked to do a 10 minute lightning talk on a topic of my choice. I decided to present a session on 'Visual Studio Code for PowerShell'.
+I was asked to do a 10 minute lightning talk on a topic of my choice. I decided to present a session on 'Visual Studio Code for PowerShell'.
 
 ## Why Visual Studio Code?
 
