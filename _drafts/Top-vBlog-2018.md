@@ -1,0 +1,55 @@
+---
+layout: single
+title: "Top vBlog 2018"
+# date: YYYY-MM-DD
+category: [Blog]
+excerpt: "Voting is open for the Top vBlog 2018"
+---
+# Introduction
+
+It's that time of year again where the voting is open for the Top vBlog. As my blog has been going for a couple of years now, I have decided to enter it. I hope you will consider voting for me this year.
+
+## Top vBlog
+
+This is an initiative that has been going for a few year now by [Eric Siebert](https://twitter.com/ericsiebert) and it a great way of showing your favourite bloggers how much you appreciate their hard work. Blogging is not easy!
+
+AS IT Professionals we rely on the content produced by bloggers to help us with issues, solve problems and learn new things. Sometimes it can feel you are blogging into the void and are wasting your time, so this is a great way of validating that you appreciate the work.
+
+Heavyweights in the VMware blogging community such as [William Lam](https://www.virtuallyghetto.com/), [Chris Wahl](http://wahlnetwork.com/), [Derek Seaman](https://www.derekseaman.com/) and [Melissa Palmer](https://vmiss.net/) always feature highly in the rankings but I love finding out about lower ranked blogs what I may not have heard about, but have amazing content.
+
+See the 2017 results [here](http://vsphere-land.com/news/top-vblog-2017-full-results.html).
+
+## This Blog So Far
+
+I have submitted this blog for 2018. I love getting feedback on what I post and would love to see if people out there appreciate my content.
+
+Looking at my stats in 2018 I have had over 27,000 pageviews (I'm pretty amazed at that fact!). The top 10 posts by pageviews have been:
+
+1. [Windows 10 Fall Creators Update and Synology NAS]({{ site.baseurl }}{% post_url 2017-10-20-Windows-10-Synology-SMB1-Error %})
+2. [Terraform with vSphere - Part 2]({{ site.baseurl }}{% post_url 2017-10-08-Terraform-Part-2 %})
+3. [pfSense in VMware Workstation]({{ site.baseurl }}{% post_url 2018-06-10-pfSense-VMware-Workstation %})
+4. [HPE ProLiant iLO Configuration using PowerShell]({{ site.baseurl }}{% post_url 2017-03-11-HPE-ProLiant-iLO-Configuration-using-PowerShell %})
+5. [Homepage]({{ site.baseurl }}{% post_url / %})
+6. [vCSA Root Disk Space Issue Caused by dnsmasq]({{ site.baseurl }}{% post_url 2018-02-11-vCSA-Root-Out-Of-Space-dnsmasq %})
+7. [Updating HPE iLO Firmware using PowerShell]({{ site.baseurl }}{% post_url 2018-06-24-Update-HPE-iLO-Firmware %})
+8. [Adding VMware Drivers to Server 2012 R2 Boot Media]({{ site.baseurl }}{% post_url 2017-12-03-VMware-Drivers-Server-2012-R2 %})
+9. [Terraform with vSphere - Part 3]({{ site.baseurl }}{% post_url 2017-10-12-Terraform-Part-3 %})
+10. [Terraform with vSphere - Part 1]({{ site.baseurl }}{% post_url 2017-10-01-Terraform-Part-1 %})
+
+Total number of posts is 70 with 37 in 2018.
+
+## Voting
+
+As detailed on the [voting post](http://vsphere-land.com/news/voting-now-open-for-top-vblog-2018.html) bear in mind Longevity of the blog, Length of posts, Frequency and the Quality. I hope I have fulfilled all the categories in your eyes.
+
+You can go ahead and vote [here](https://topvblog.questionpro.com/). Voting is open until the 15th December 2018.
+
+## Wrap Up
+
+Even if you don't vote for this blog please consider the [Scottish VMUG Community Blog](http://www.scottishvmug.com/) and vote for it. The community has been hard at work posting there so it would be great to get some votes for it.
+
+If you have a blog I'd urge you to submit it to Eric for inclusion to the [vLaunchpad](http://thevpad.com/). It's a great site to find some new bloggers to follow.
+
+In fairness I am not going to vote for my own blog, so please feel free to support this blog. I know I will have some tough decisions to make when I cast my votes.
+
+Once again, the information post is [here](http://vsphere-land.com/uncategorized/introducing-top-vblog-2018.html) and the voting page is available [here](https://topvblog.questionpro.com/). I'm looking forward to the results.
