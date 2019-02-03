@@ -45,7 +45,7 @@ What I really like about each section is that it starts simple and leads you ont
 
 In my opinion this Cookbook is not just helpful for people maintaining vSAN, but anyone new to PowerCLI will appreciate the content. The Getting Started section can be used by a person new to PowerCLI. I am starting to 'force' myself to use PowerShell and PowerCLI for day to day administrative tasks instead of the GUI and some of the samples are ones I will use as we have our first couple of four node vSAN clusters. For someone totally new the explanations give good context to what is happening instead of just reading the cmdlet documentation.
 
-If you want to learn more about the Cookbook direct from the author, Jase appeared in Episode 26 of the [vGigacast](https://twitter.com/vgigacast) talking about the cookbook. You can watch the episode on [Youtube](https://www.youtube.com/watch?v=Nv4PnJttl1M) or listen to the [Podcast](http://gigabrit.com/podlove/file/69/s/download/c/select-show/Episode - 26.mp3). As an aside the vGigacast is an engaging listen and is an essential listen on my podcast list. Keep it up [Britton](https://twitter.com/vcixnv) and [Tony](https://twitter.com/importcarguy)!
+If you want to learn more about the Cookbook direct from the author, Jase appeared in Episode 26 of the [Gigacast](https://twitter.com/vgigacast) talking about the cookbook. You can watch the episode on [Youtube](https://www.youtube.com/watch?v=Nv4PnJttl1M) or listen to the [Podcast](http://gigabrit.com/podlove/file/69/s/download/c/select-show/Episode - 26.mp3). As an aside the Gigacast is an engaging listen and is an essential listen on my podcast list. Keep it up [Britton](https://twitter.com/vcixnv) and [Tony](https://twitter.com/importcarguy)!
 
 ## Wrap Up
 
