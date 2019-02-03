@@ -52,3 +52,7 @@ If you want to learn more about the Cookbook direct from the author, Jase appear
 As I said in the introduction this is v1.0 of the Cookbook. I intend to check back on it and see the updates that are sure to come. One suggestion for v1.1 could be in the Getting Started section is [updating to the latest version of PowerCLI]({{ site.baseurl }}{% post_url 2018-03-11-PowerCLI-v10 %}).
 
 The [PowerCLI Cookbook for vSAN](https://storagehub.vmware.com/section-assets/powercli-cookbook-for-vsan) should be essential reading for all vSAN administrators and anyone with an interest in PowerCLI. Brilliant work Jase and thanks for all the hard work that must have gone into this.
+
+## Update!
+
+In the time it took me to write this post v1.1 has been released. There are updates specifically for Stretched Clusters. Glad to see this is actively being worked on.
