@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "vCenter 6.7U1, Custom Certificates and Lookup Service Error"
+title: "vCenter 6.7U1, NSX Manager, Custom Certificates and Lookup Service Error"
 date: 2019-03-03
 category: [VMware]
 excerpt: "A 'fix' for an issue adding NSX Manager to the Lookup Service when Custom Certificates are deployed"
