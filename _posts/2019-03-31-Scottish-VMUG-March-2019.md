@@ -35,7 +35,7 @@ I also had further discussions on mental health, Stargate and how the gates rela
 
 ## Wrap Up
 
-I need to thank the VMUG Leaders [Sandy Bryce](https://twitter.com/sandybryce), [Martin Campbell](https://twitter.com/vmartincam), [James Cruickshank](https://twitter.com/vCrooky) and [Iain Balmer](https://twitter.com/Balmeri) for organising the day. They are a well oiled machine now on running a brilliant day what provides such valuable learning to us all. Thanks guys!
+I need to thank the VMUG Leaders [Sandy Bryce](https://twitter.com/sandybryce), [Martin Campbell](https://twitter.com/vmartincam), [James Cruickshank](https://twitter.com/vCrooky) and [Iain Balmer](https://twitter.com/Balmeri) for organising the day. They are a well oiled machine now on running a brilliant day what provides such valuable learning to us all. Thanks guys! Shout out to [Chris Storrie](https://twitter.com/chrisstorrie) too for his contributions on the day and evening. Even though he's not 'official' it's great to see him there and he's on top of the sticker game!
 
 I'd urge everyone that attended to join the Scottish VMUG Slack. Just [contact the leaders](mailto:scotland@vmug.com) to request access. Lots of great knowledge sharing, banter, ranting, home automation and homelab chat. What more do you want?
 
