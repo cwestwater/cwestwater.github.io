@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "DellEMC Isilon Simulator -  Part 1"
-# date: YYYY-MM-DD
+date: 2019-04-23
 category: [VMware]
 excerpt: "How to setup a Dell EMC Isilon four node cluster on VMware Workstation"
 ---
