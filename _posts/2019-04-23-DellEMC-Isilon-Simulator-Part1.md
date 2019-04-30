@@ -166,4 +166,4 @@ I can then click on `1` and look at Node 1 to check everything looks good. I can
 
 ## Wrap Up
 
-So that is the first node in the cluster setup. My next post will cover adding nodes 2, 3, and 4 plus basic tasks like setting up NTP, AD integration, and licensing the cluster.
+So that is the first node in the cluster setup. [Part 2]({{ site.baseurl }}{% post_url 2019-04-30-DellEMC-Isilon-Simulator-Part2 %}) will cover adding nodes 2, 3, and 4 plus basic tasks like setting up NTP, AD integration, and licensing the cluster.
