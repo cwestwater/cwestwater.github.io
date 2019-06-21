@@ -41,7 +41,7 @@ Some of the technology I have experience of it:
 * Unitrends
 * Polycom Video Conferencing
 
-My real passions are VMware first then Microsoft Enterprise applications/technology.  I am slowly learning PowerShell as I see a need to use it.  Everyone in the Microsoft IT world needs to get PowerShell on their toolkit in my opinion.
+My real passions are VMware first then Microsoft Enterprise applications/technology.
 
 My CV is available on request.
 
