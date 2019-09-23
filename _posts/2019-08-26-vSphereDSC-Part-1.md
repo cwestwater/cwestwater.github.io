@@ -172,4 +172,4 @@ PowerShell      VMHostVssTeaming          VMware.vSphereDSC              2.0.0.0
 
 We are ready to go. PowerCLI is up to date, we have the DSC resource installed, and an IDE to write code.
 
-In [vSphere DSC - Part 2]({{ site.baseurl }}{% post_url 2019-08-26-vSphereDSC-Part-2 %}) we will have a look at some modules to configure a vSphere Cluster and hosts.
+In [vSphere DSC - Part 2]({{ site.baseurl }}{% post_url 2019-09-23-vSphereDSC-Part-2 %}) we will have a look at some modules to configure a vSphere Cluster and hosts.
