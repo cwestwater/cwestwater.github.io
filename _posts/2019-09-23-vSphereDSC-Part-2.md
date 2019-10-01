@@ -3,7 +3,7 @@ layout: single
 title: "vSphere DSC - Part 2"
 date: 2019-09-23
 category: [VMware]
-excerpt: "This is Part 2 of a series on vSphere DSC. We will cover a simple vSphere DSC example"
+excerpt: "This is Part 2 of a series on vSphere DSC. We will cover a simple ESXi Host DSC example"
 ---
 ## Introduction
 
