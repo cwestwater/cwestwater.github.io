@@ -7,7 +7,7 @@ excerpt: "A review of the book IT Architect Series: The Journey by Melissa Palme
 ---
 # Introduction
 
-Something a bit different for the blog post. A book review! I purchased a copy of the book [IT Architect Series: The Journey](https://itarchitectjourney.com/) written by VCDX 236, [Melissa Palmer](https://twitter.com/vmiss33) and here is my review of the book. 
+Something a bit different for the blog post. A book review! I purchased a copy of the book [IT Architect Series: The Journey](https://itarchitectjourney.com/) written by VCDX 236, [Melissa Palmer](https://twitter.com/vmiss33) and here is my review of the book.
 
 TL:DR I think this is an essential read not only for the budding IT Architect but anyone that wants to further their infrastructure skills and career.
 
@@ -92,7 +92,7 @@ The three appendices are very useful. There is a self-assessment workbook that i
 
 ## Wrap Up
 
-AS I said in the introduction, even though this book it titled IT Architect I feel this excellent book for anyone in any stage of their IT career. The book can give you excellent foundation in learning all the key skills and architect needs but also can be relevant to someone starting their career. I wish I had worked on my Public Speaking and Written Communication skills right from the start of my career.
+As I said in the introduction, even though this book it titled IT Architect I feel this excellent book for anyone in any stage of their IT career. The book can give you excellent foundation in learning all the key skills and architect needs but also can be relevant to someone starting their career. I wish I had worked on my Public Speaking and Written Communication skills right from the start of my career.
 
 The book is well written in an easy to follow format. You can get through it in a few hours of reading. It is one you should read cover to cover initially but you will then dip in and out of many times after that. I like the practical advice on how to gain or strengthen the key skills an IT Architect needs to have along with the worksheets to aid you. It made me realise some skills that I need to work on and gives me the framework to do it.
 
