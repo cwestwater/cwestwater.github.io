@@ -188,8 +188,8 @@ Here (if only connecting to three vCenters) edit the variable `$OutputFile` to t
 If you had more than three vCenters exporting information, you would just amend the merge utility line as so:
 
 ~~~ posh
-
-~~~& .\RVToolsMergeExcelFiles.exe -input "$XlsxDir1\$XlsxFile1;$XlsxDir2\$XlsxFile2;$XlsxDir3\$XlsxFile3;$XlsxDir4\$XlsxFile4;$XlsxDir5\$XlsxFile5" -output $OutputFile -overwrite -verbose
+& .\RVToolsMergeExcelFiles.exe -input "$XlsxDir1\$XlsxFile1;$XlsxDir2\$XlsxFile2;$XlsxDir3\$XlsxFile3;$XlsxDir4\$XlsxFile4;$XlsxDir5\$XlsxFile5" -output $OutputFile -overwrite -verbose
+~~~
 
 At this point you have a xlsx file with all the details for the multiple vCenters. At the end of the script is some code to email the merged xlsx file. Just edit the variables for your environment. For example:
 
