@@ -193,10 +193,9 @@ If you had more than three vCenters exporting information, you would just amend 
 
 At this point you have a xlsx file with all the details for the multiple vCenters. At the end of the script is some code to email the merged xlsx file. Just edit the variables for your environment. For example:
 
-~~~
-# ---------------------
+~~~ posh
 # Mail output xlsx file
-# ---------------------
+
 [string] $SMTPserver = "smtprelay.corp.contoso.com"
 [string] $SMTPport = "25"
 [string] $Mailto = "cwestwater@corp.contoso.com"
