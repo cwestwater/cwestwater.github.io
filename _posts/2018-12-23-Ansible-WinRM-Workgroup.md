@@ -106,13 +106,13 @@ Service
     EnableCompatibilityHttpsListener = false
     CertificateThumbprint
     AllowRemoteAccess = true
-    ~~~
+~~~
 
 The first command sets WinRM to Basic Authentication and the second allows unencrypted traffic.
 
 Running Ansible again:
 
-~~~ bash
+~~~ dosbatch
 [ansible@control]$ ansible servers -i inventory.yml -m win_ping
 server1 ¦ SUCCESS! => {
     "changed": false,
