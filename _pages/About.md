@@ -2,6 +2,7 @@
 layout: single
 title: "About Colin Westwater"
 permalink: /about/
+author_profile: true
 ---
 
 You may have noticed the title.  What is Gemba?  From Wikipedia:
