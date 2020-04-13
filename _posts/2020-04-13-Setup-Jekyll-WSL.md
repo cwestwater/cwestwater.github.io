@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Jekyll Setup on WSL Running Ubuntu"
-# date: 2020-04-13
+date: 2020-04-13
 category: [Blog]
 excerpt: "Update on latest way to install Jekyll on WSL running Ubuntu"
 ---
