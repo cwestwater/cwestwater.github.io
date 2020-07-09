@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "VMware vSphere Central"
-# date: YYYY-MM-DD
+date: 2020-07-10
 category: [VMware]
 excerpt: "A quick post on a useful resource - vSphere Central"
 ---
@@ -33,7 +33,7 @@ Under each section there is lots more detail and sub sections. For instance we c
 
 [![vSphere Upgrade]({{ site.url }}/assets/images/vSphere-Central-02.png)](https://www.vgemba.net/assets/images/vSphere-Central-02.png "vSphere Upgrade")
 
-You can see in the playlists there are Release notes, ebook, Blog post, walkthroughs, and documentation. What is a nice feature of every page it the ability to export the content to PDF. You can export the whole category:
+You can see in the playlists there are Release notes, ebooks, blog post, walkthroughs, and documentation. What is a nice feature of every page is the ability to export the content to PDF. You can export the whole category:
 
 ![vSphere Upgrade Export]({{ site.url }}/assets/images/vSphere-Central-03.png)
 
@@ -43,8 +43,16 @@ You can also export individual playlists too by clicking the highlighted button:
 
 How does the export handle video content? The PDF has clickable links to the video hosted on YouTube. The PDFs generated are well formatted (thank you!) and have clear screenshots in them.
 
-The actual content is of high quality and well curated. It is nice to have varied content collated in the one place to keep you interested. It's very easy to be bored by PowerPoint. Navigating the UI is straightforward with clear navigation between the categories and playlists. At the bottom left hand of each page there is a handy Share This Page link to various platforms and to copy the URL:
+The actual content is of high quality and well curated. It is nice to have varied content collated in the one place to keep you interested. It's very easy to be bored by PowerPoint.
+
+Navigating the UI is straightforward with clear navigation between the categories and playlists. At the bottom left hand of each page there is a handy Share This Page link to various platforms and to copy the URL:
 
 ![vSphere Central Share]({{ site.url }}/assets/images/vSphere-Central-05.png)
 
+One thing to note is some of the content is outdated. For instance in the section [PowerCLI installation Walkthrough](https://vspherecentral.vmware.com/t/command-line-interfaces/powercli-installation-walkthrough/) the content is for PowerCLI 6.5, and currently PowerCLI is at version 12. I have not gone through all of vSphere Central (yet!) but please verify everything you read is currently relevant.
 
+### Wrap Up
+
+[vSphere Central](https://vspherecentral.vmware.com) is a great resource that I think flies under the radar a bit. I feel like I keep up to date on VMware content, but looking back it was actually [released in August 2017](https://blogs.vmware.com/vsphere/2017/08/welcome-to-vsphere-central.html) and I only recently heard about it.
+
+I hope this post helps advertise this valuable resource. Please go and have a look today and bookmark the site to keep tabs on it.
