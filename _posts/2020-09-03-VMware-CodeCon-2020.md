@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "VMware {code} Connect 2020"
-# date: YYYY-MM-DD
+date: 2020-09-03
 category: [VMware]
 excerpt: "A new VMware event right after VMworld - {code} Connect 2020"
 ---
