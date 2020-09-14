@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "GPG Keys for Verified GitHub Commits"
-# date: YYYY-MM-DD
+date: 2020-09-14
 category: [Other]
 excerpt: "How to use a GPG key to get verified commits in GitHub using Visual Studio Code on Windows"
 ---
@@ -12,7 +12,7 @@ When looking at some repositories in GitHub I noticed a green Verified icon next
 
 ![Verified Commit]({{ site.url }}/assets/images/GitHub-Verified-Commit-01.png)
 
-What are these Verified icons? Basically there is a GPG key that is generated on your computer which you export the public key to your GitHub profile. This ensures the commit has come from you and is backed up by using the cryptographically derived key. It's another layer of protection of your commits alongside your username and password (and you also use [2FA for GitHub login](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication) right?)
+What are these Verified icons? Basically there is a GPG key that is generated on your computer which you export the public key to your GitHub profile. This ensures the commit has come from you and is backed up by using the cryptographically derived key. It is another layer of protection of your commits alongside your username and password (and you also use [2FA for GitHub login](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication) right?)
 
 I started looking into this and finally got it working after finding a missing piece of information. This blog post will detail:
 
@@ -123,7 +123,7 @@ disks) during the prime generation; this gives the random number
 generator a better chance to gain enough entropy.
 ```
 
-At this point do some random tasks on your computer. I moved the mouse around then opened notepad and typed a bunch of random characters.
+At this point do some random tasks on your computer. I moved the mouse around then opened notepad and typed a bunch of random characters. Once there has been enough random activity the key is generated:
 
 ```
 gpg: key 559AEF6CD6DE0E3F marked as ultimately trusted
@@ -219,4 +219,18 @@ This will ensure when you commit from Visual Studio Code it will use the GPG key
 
 > **Important Note** - I usually use GitHub Desktop as my client for interacting with GitHub. However the GitHub Desktop client does **not** support GPG key signing
 
-###
+### Commits in Visual Studio Code
+
+When you commit changes in Visual Studio Code when it tried to use the GPG key to authenticate and sign the commit, there is a requirement to enter the passphrase that was created in the first section Create the GPG Key. Enter the passphrase to continue:
+
+![VS Code Commit]({{ site.url }}/assets/images/GnuPG-VSCode-Commit.png)
+
+The commit will then work as normal. If you then check GitHub you should see the green Verified icon against your commit:
+
+![GitHub Code Commit]({{ site.url }}/assets/images/GitHub-Verified-Commit-02.png)
+
+### Wrap Up
+
+None of this is strictly necessary for the average admin. It does add some additional security and verification to your commits, but for me it was just a fun exercise in expanding my knowledge in GitHub. If you want to add that Verified icon to your commits this guide should get you there.
+
+Just remember GitHub Desktop doesn't support signed commits, so either use the Git command line or Visual Studio Code.
