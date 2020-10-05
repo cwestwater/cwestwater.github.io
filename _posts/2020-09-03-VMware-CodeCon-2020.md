@@ -54,7 +54,7 @@ I'm personally going to evaluate if I can make the time for this as I am slammed
 
 ### Wrap Up
 
-As I mentioned above details on the sessions seem to be thin on the ground, so I will update this post as more details emerge. Keep your eyes on this page, the [{code}](https://code.vmware.com/home) homepage, and [Twitter](https://twitter.com/vmwarecode) for updates. I am looking forward to this event.
+As I mentioned above details on the sessions seem to be thin on the ground so keep your eyes on this page, the [{code}](https://code.vmware.com/home) homepage, and [Twitter](https://twitter.com/vmwarecode) for updates. I am looking forward to this event.
 
 [Register for {code} Connect here](https://code.vmware.com/codecon-registration)
 
