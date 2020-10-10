@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "A Guide to VMware Tools and Drivers"
-# date: YYYY-MM-DD
+title: "Silent Install VMware Tools"
+#date: YYYY-MM-DD
 category: [VMware]
-excerpt: ""
+excerpt: "How to download, extract, and silent install VMware Tools on Windows"
 ---
 
 ## Introduction
@@ -12,15 +12,13 @@ VMware Tools are critical for the effective use of virtual machines. From the VM
 
 > VMware Tools is a set of services and modules that enable several features in VMware products for better management of, and seamless user interactions with, guest operating systems.
 
-In this post I will details how to download, install, and extract the drivers of VMware Tools.
-
-## What does VMware Tools do?
+In this post I will details how to download, extract, and manually VMware Tools and the drivers contained in it.
 
 ## Download
 
 The first thing is to download VMware tools. The [VMware Tools Operating System Specific Packages](https://www.vmware.com/support/packages.html) is an excellent resource for finding all the Tools package downloads. To see a list of all release back to v10.0.0 you can visit [https://packages.vmware.com/tools/releases/](https://packages.vmware.com/tools/releases/).
 
-The latest VMware Tools can always be accessed at [https://packages.vmware.com/tools/releases/latest/](https://packages.vmware.com/tools/releases/latest/). At the time of this blog post the latest VMware Tools version is 11.1.1.
+The latest VMware Tools can always be accessed at [https://packages.vmware.com/tools/releases/latest/](https://packages.vmware.com/tools/releases/latest/). At the time of this blog post the latest VMware Tools version is 11.1.5.
 
 Under the version of tools you need, there are download options for the following operating systems:
 
@@ -38,7 +36,7 @@ For Linux VMs it is generally it is best to use open-vm-tools which is built int
 
 Windows is a more manual process. VM Tools is not part of the OS and doesn't ship as part of it, so it needs to be installed after the operating system is installed.
 
-If you browse the package site and browse down in to the latest Windows release you are shown the following (not at the time of this blog post the version of VM Tools is 11.1.1):
+If you browse the package site and browse down in to the latest Windows release you are shown the following (note at the time of this blog post the version of VM Tools is 11.1.5):
 
 ![VMware Tools Packages]({{ site.url }}/assets/images/VMware-Tools-Packages.png)
 
@@ -52,10 +50,10 @@ Unless you are verifying the download just grab the 138MB ISO file.
 
 The two folders `x64` and `x86` contain standalone `.exe` files for use in the OS. Just pick your flavour:
 
-- VMware-tools-11.1.1-16303738-i386.exe - 32 bit Windows
-- VMware-tools-11.1.1-16303738-x86_64.exe - 64 bit Windows
+- VMware-tools-11.1.5-16724464-i386.exe - 32 bit Windows
+- VMware-tools-11.1.5-16724464-x86_64.exe - 64 bit Windows
 
-## ISO File
+### ISO File
 
 The ISO file is the best option if you want to mount the ISO to the VM and install VMware Tools. Mounting the ISO exposes the following files/folders:
 
@@ -63,7 +61,7 @@ The ISO file is the best option if you want to mount the ISO to the VM and insta
 
 You can see there is an `autorun.inf` there so the install may launch automatically when the ISO is mounted. If not, launch `setup.exe` for 32 bit Windows, and `setup64.exe` for 64 bit Windows.
 
-## Standalone .exe Files
+### Standalone .exe Files
 
 The standalone `VMware-tools-*.exe` files run exactly the same installation as the `setup.exe` and `setup64.exe` files packaged in the ISO file. In fact if you look at the file size for the 32 and 64 bit files they match:
 
@@ -77,7 +75,7 @@ The traditional way of installing VMware Tools is using `Install/Upgrade VMware 
 
 What seems to be coming more common is to use something like SCCM to push out VMware Tools to the OS. This will require using silent install deployment options using command line switches.
 
-You can get some idea of what is required by calling the installation .exe (setup.exe/setup64.exe for the ISO download or the VMware-tools-*.exe for the standalone download) from a command line with the switch `setup64.exe /?`
+You can get some idea of what is required by calling the installation .exe (setup.exe/setup64.exe for the ISO download or the VMware-tools-\*.exe for the standalone download) from a command line with the switch `setup64.exe /?`
 
 ![VMware Tools Setup Switches]({{ site.url }}/assets/images/VMware-Tools-setup-switches.png)
 
@@ -91,7 +89,7 @@ Next is the MSI arguments:
 - `/qn` - fully silent install
 - REBOOT=R - do NOT reboot
 - ADDLOCAL=ALL - install all components
-- REMOVE=* - do not install specific components
+- REMOVE=\* - do not install specific components
 
 It seems kind of strange that if you do not want to install some component you have to first specify to install everything then remove the component. Just one of those things when they designed msi packages I guess.
 
@@ -115,8 +113,24 @@ So how do you know what the [individual component](https://docs.vmware.com/en/VM
 - AppDefense - AppDefence component
 - Perfmon - WMI performance logging driver
 
-Some of these options depend on the OS version. For instance if I manually start a Tools install on a Windows Server 2019 VM I see:
+Some of these options obviously depend on the OS version.
 
-- Toolbox
-- PVSCSI
-- 
+An example install at the command line is this:
+
+```shell
+VMware-tools-11.1.5-16724464-x86_64.exe /S /v"/qn REBOOT=R ADDLOCAL=ALL REMOVE=AppDefense,FileIntrospection,NetworkIntrospection,Hgfs" /l C:\Temp\VMwareToolsInstall.log
+```
+
+Let's break this down:
+
+- This installs the Windows 64-bit version of VMware Tools
+- The installer is silent and hides the dialog box
+- Suppress a reboot
+- Install all options except AppDefense, NSX File and Network Introspection, and Shared Folders
+- Output a log file to C:\Temp
+
+You can use this now at the command line or packed up in a third party tool for mass deployment.
+
+## Wrap Up
+
+VMware Tools is a critical part of your vSphere environment. This should give you the knowledge to integrate the deployment of VMware tools in an silent fashion using a simple command line script.
