@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Silent Install VMware Tools"
-#date: YYYY-MM-DD
+date: 2020-10-13
 category: [VMware]
 excerpt: "How to download, extract, and silent install VMware Tools on Windows"
 ---
