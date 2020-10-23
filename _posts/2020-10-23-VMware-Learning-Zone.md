@@ -1,6 +1,5 @@
 ---
 layout: single
-classes: wide
 title: "VMware Learning Zone - Time Limited Offer"
 date: 2020-10-23
 category: [VMware]
