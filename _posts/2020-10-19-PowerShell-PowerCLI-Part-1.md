@@ -181,4 +181,4 @@ What I would do on a system if you want to start using v7 along with v5 is the f
 
 This can seem confusing. It's just what we have to live with while Microsoft still 'support' two versions of PowerShell.
 
-Coming up in the next post is what happens if you mix the installed versions of PowerCLI between v5.1 and v7.
+Coming up in [Part 2]({{ site.baseurl }}{% post_url 2020-10-30-PowerShell-PowerCLI-Part-2 %}) is what happens if you mix the installed versions of PowerCLI between v5.1 and v7 and what happens when you update the PowerCLI module.
