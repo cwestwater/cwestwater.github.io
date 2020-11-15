@@ -41,7 +41,7 @@ At the time of this blog post this is GnuPG version 2.2.23.
 
 Install is as simple as it gets - Next, Next, Install, Next, Finish. If you want to silent install from a command prompt run:
 
-```
+```shell
 C:\Users\cwestwater\Downloads\gnupg-w32-2.2.23_20200903.exe /S
 ```
 
@@ -51,7 +51,7 @@ Now that GnuGP is installed we can create the key. Open a command prompt and run
 
 The first is asking what kind of key you want. Select `RSA and RSA (default)`:
 
-```
+```shell
 C:\Users\cwestwater>gpg --full-generate-key
 gpg (GnuPG) 2.2.23; Copyright (C) 2020 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it.
@@ -68,7 +68,7 @@ Your selection? 1
 
 Next it will ask how log a key you want to generate. Choose `4096`:
 
-```
+```shell
 RSA keys may be between 1024 and 4096 bits long.
 What keysize do you want? (3072) 4096
 Requested keysize is 4096 bits
@@ -76,7 +76,7 @@ Requested keysize is 4096 bits
 
 Next step will be to define how long you want the key to be valid. I select it does not expire by typing `0`:
 
-```
+```shell
 Please specify how long the key should be valid.
          0 = key does not expire
       <n>  = key expires in n days
@@ -90,7 +90,7 @@ Is this correct? (y/N) y
 
 Next is the critical part. You need to define the identity tied to the key. This should match the email address used for your GitHub login:
 
-```
+```shell
 GnuPG needs to construct a user ID to identify your key.
 
 Real name: Colin Westwater
@@ -112,7 +112,7 @@ Confirm it in the next popup:
 
 Once the passphrase is entered twice the following message appears:
 
-```
+```shell
 We need to generate a lot of random bytes. It is a good idea to perform
 some other action (type on the keyboard, move the mouse, utilize the
 disks) during the prime generation; this gives the random number
@@ -125,7 +125,7 @@ generator a better chance to gain enough entropy.
 
 At this point do some random tasks on your computer. I moved the mouse around then opened notepad and typed a bunch of random characters. Once there has been enough random activity the key is generated:
 
-```
+```shell
 gpg: key 559AEF6CD6DE0E3F marked as ultimately trusted
 gpg: directory 'C:/Users/a-cwestwater/AppData/Roaming/gnupg/openpgp-revocs.d' created
 gpg: revocation certificate stored as 'C:/Users/a-cwestwater/AppData/Roaming/gnupg/openpgp-revocsd\4215C8F63A1AC8827E107F25559AEF6CD6DE0E3F.rev'
@@ -139,7 +139,7 @@ sub   rsa4096 2020-09-12 [E]
 
 The key has been generated. We can check the key and get the key ID by running `gpg --list-secret-keys --keyid-format LONG`:
 
-```
+```shell
 C:\Users\cwestwater>gpg --list-secret-keys --keyid-format LONG
 gpg: checking the trustdb
 gpg: marginals needed: 3  completes needed: 1  trust model: pgp
@@ -156,7 +156,7 @@ The key ID in this case is `BE2794AD339B8177`.
 
 Next step is to get the public key. Run the command `gpg --armor --export <ID> > C:\Temp\publicKey.asc` replacing `<ID>` with the key ID above. This pipes the output to a file in `C:\Temp\`:
 
-```
+```shell
 C:\Users\cwestwater>gpg --armor --export 9B5282E84DFEC1C5 > C:\Temp\publicKey.asc
 ```
 
@@ -166,25 +166,25 @@ If you now open the file `publicKey.asc` in notepad the Public Key is ready for 
 
 Now to setup Git to use the key. First thing to do is tell Git where the GnuPG executable is. Run the following command (assuming GnuPG is installed in `"C:\Program Files (x86)\GnuPG\bin\gpg.exe"`):
 
-```
+```shell
 C:\Users\cwestwater> git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 ```
 
 Next is to add the key ID to the git config:
 
-```
+```shell
 C:\Users\cwestwater> git config --global user.signingkey BE2794AD339B8177
 ```
 
 Use the key ID identified above. Finally I'm going to configure Git to sign all commits by default no matter what repo I am in:
 
-```
+```shell
 C:\Users\cwestwater> git config --global commit.gpgsign true
 ```
 
 Check Git is setup correctly with `git config --list`:
 
-```
+```shell
 C:\Users\cwestwater> git config --list
 user.name=Colin Westwater
 user.email=cwestwater@gmail.com
