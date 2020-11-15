@@ -193,7 +193,7 @@ gpg.program=C:\Program Files (x86)\GnuPG\bin\gpg.exe
 commit.gpgsign=true
 ```
 
-I am just showing the lines we are concerned with. Ensure `user.email` matches the email address you have registred your GitHub account with.
+I am just showing the lines we are concerned with. Ensure `user.email` matches the email address you have registered your GitHub account with.
 
 ### Add the GPG Key to GitHub.com
 
@@ -201,7 +201,7 @@ Now to add the public key from above to your GitHub account. Login to your GitHu
 
 ![SSH and GPG keys]({{ site.url }}/assets/images/GnuPG-GitHub-01.png)
 
-In the Add new box, paste in the public key you saved in the step above to `publicKey.asc`. Just open this in Notepad, and copy the entire contents. Paste into the box anc click Ok:
+In the Add new box, paste in the public key you saved in the step above to `publicKey.asc`. Just open this in Notepad, and copy the entire contents. Paste into the box and click Ok:
 
 ![SSH and GPG keys]({{ site.url }}/assets/images/GnuPG-GitHub-02.png)
 
