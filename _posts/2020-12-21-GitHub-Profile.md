@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "GitHub Profiles"
-# date: 2020-11-23
+date: 2020-12-21
 category: [GitHub]
 excerpt: "GitHub now have a feature to have a welcome profile when visiting your GitHub profile"
 ---
