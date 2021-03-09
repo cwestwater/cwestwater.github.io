@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "My Gostand Desk Review"
-# date: YYYY-MM-DD
+date: 2021-03-09
 category: [Other]
 excerpt: "I purchased a standing desk and I'm very happy with it"
 ---
@@ -39,7 +39,7 @@ The pre-drilling option is worth explaining. Without this option when you assemb
 
 Here is a picture of the insert for the handset:
 
-![Metal Insert]({{ site.url }}/assets/images/Desk-Insert-01.png)
+![Metal Insert]({{ site.url }}/assets/images/Desk-Insert.jpg)
 
 The cable tray was another option I am so glad I bought. It is a very solid piece of metal and I managed to get loads of cables and two Unifi switches (1x 5 Port and 1 x 8 Port) in there. When the cover is on you can't see anything in there. My cable OCD was happy!
 
@@ -71,8 +71,36 @@ The desk easily lifts this without any straining noises from the motors and at h
 
 ## Verdict
 
-All in I paid £687.99 which is a lot of money for a desk but already I feel the benefits of not standing all day. I'll keep this desk for year and with the amount of time I spend at it I feel like I have value for money. When spending that amount of money I wanted to make sure I was getting a quality item and I definitely feel like I have a well engineered high spec desk.
+All in I paid £687.99 which is a lot of money for a desk but already I feel the benefits of not standing all day. I'll keep this desk for years and with the amount of time I spend at it I feel like I have value for money. When spending that amount of money I wanted to make sure I was getting a quality item and I definitely feel like I have a well engineered high spec desk.
 
 I'd highly recommend GoStand if you are looking for a standing desk. They offer manual options, frame only, desktop converters, etc. Customer service was quick as was shipping. Assembly was easy with the pre drilling and inserts option.
 
 ## Photos
+
+### Top View
+
+Top view of the desk showing all the items on the desktop
+
+![Desk Top View]({{ site.url }}/assets/images/Desk-Top-View.jpg)
+
+### Underneath View
+
+Not happy with the cable neatness yet so better length cables are on order
+
+![Desk Underneath]({{ site.url }}/assets/images/Desk-Underneath.jpg)
+
+### Max Height
+
+Desk at max height of 130cm
+
+![Desk Max Height]({{ site.url }}/assets/images/Desk-Max-Height.jpg)
+
+### Cable Tray
+
+Cable tray cover removed
+
+![Desk Cable Tray]({{ site.url }}/assets/images/Desk-Cable-Tray-01.jpg)
+
+Cable tray cover in place
+
+![Desk Cable Tray]({{ site.url }}/assets/images/Desk-Cable-Tray-02.jpg)
