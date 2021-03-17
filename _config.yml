@@ -11,8 +11,8 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" #"default" "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-GB"
@@ -23,7 +23,7 @@ name                     : "Colin Westwater"
 description              : "A blog about IT, VMware, PowerShell, Automation and Careers"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "cwestwater/cwestwater.github.io"
+repository               : "cwestwater/cwestwater.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : /assets/images/masthead.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -51,8 +51,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : true
-search_full_content      : true
+  hide                   : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
 search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -75,17 +76,19 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : /assets/images/site-logo.png # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : Person
+  type                   : Person # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://twitter.com/cwestwater"
+    - "https://www.linkedin.com/in/colinwestwater/"
+
 # Analytics
 analytics:
-  provider               : "google"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "UA-102676397-1"
     anonymize_ip         : true
@@ -94,8 +97,8 @@ analytics:
 # Site Author
 author:
   name             : "Colin Westwater"
-  avatar           : "/assets/images/bio_photo.png"
-  bio              : # "I am an **amazing** person."
+  avatar           : "/assets/images/bio_photo.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : #"I am an **amazing** person."
   location         : "Paisley, Scotland"
   email            : "cwestwater+blog@gmail.com"
   links:
@@ -209,7 +212,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
-timezone: Europe/London # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/London# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -273,9 +276,10 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: wide
       author_profile: true
-      read_time: # true
+      read_time: true
+      show_date: true
       comments: # true
       share: # true
       related: true
