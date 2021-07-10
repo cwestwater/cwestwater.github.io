@@ -16,7 +16,7 @@ pfSense acts a virtual router/firewall that lets me run whatever I want such as 
 pfSense is available for free with paid support options available. [Download the Community Edition](https://www.pfsense.org/download/) picking the following options from the drop downs:
 
 * Version: 2.4.3
-* Architecture: AND64 (64-bit)
+* Architecture: AMD64 (64-bit)
 * Installer: CD Image (ISO) Installer
 
 Then choose the Mirror closest to you. The download is a gz archive file so you need to use something like [7-Zip](https://www.7-zip.org/download.html) to extract it to get the ISO.
