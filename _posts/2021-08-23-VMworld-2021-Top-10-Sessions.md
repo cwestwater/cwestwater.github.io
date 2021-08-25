@@ -12,6 +12,8 @@ I recently posted about [VMworld 2021]({{ site.baseurl }}{% post_url 2021-07-26-
 
 ### Build and Publish a PowerShell Module to the PowerShell Gallery [CODE2756]
 
+Content Catalog Link: [CODE2756](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=code2756)
+
 Excerpt:
 
 > Have you ever created a PowerShell module and needed to share it and didn't know how? The PowerShell gallery is a great place to do this! Join this session and learn how to build and publish a PowerShell module to the PowerShell gallery and allow your contribution to be shared with the VMware Community!
@@ -23,6 +25,8 @@ Speaker:
 My PowerShell/PowerCLI is 100% written for me to run. It's hacky, uncommented and not written to best practices. I need to make more of an effort to write them as modules which are much easier to run for people that are using the code.  The end goal for some people will be to make the module available for anyone to use. I'm hoping to learn some good habits to use in my code to make it easier for anyone to use.
 
 ### Achieving Happiness: The Quest for Something New [IC1484]
+
+Content Catalog Link: [IC1484](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=IC1484)
 
 Excerpt:
 
@@ -37,6 +41,8 @@ The original session "Achieving Happiness: Building Your Brand and Your Career" 
 
 ### Always Available Infrastructure in vSphere - Design Studio [UX2501]
 
+Content Catalog Link: [UX2501](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=UX2501)
+
 Excerpt:
 
 > Have you ever struggled when vCenter is unavailable and critical operations like Provisioning, Distributed Resource Scheduler (DRS), and High Availability (HA), tightly coupled with the vCenter availability, are not functioning? We are working on a solution that will make your infrastructure independent from vCenter failure to ensure that there will be no impact on your ability to provision, manage and monitor it. Let's find out together the best possible ways to address your needs.
@@ -48,6 +54,8 @@ Speaker:
 I have experienced a time when vCenter was unavailable. That was not a fun day. My theory for this session is the move to break up vCenter into a collection of services/vms that can run across multiple hosts. I think this is super interesting - vCenter microservices. I'm hoping this is what this session covers.
 
 ### 10 Things You Need to Know About Project Monterey [MCL1833]
+
+Content Catalog Link: [MCL1833](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=MCL1833)
 
 Excerpt:
 
@@ -62,6 +70,8 @@ I'm really excited about the possibilities from SmartNICs. A simple example is b
 
 ### Automation Showdown: Imperative vs Declarative [CODE2786]
 
+Content Catalog Link: [CODE2786](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=CODE2786)
+
 Excerpt:
 
 > The automation landscape has always been a source of rapid innovation. Historically, the languages, whether it's Perl, Python, vRealize Orchestrator JavaScript, or PowerCLI, may have changed, but the imperative, step-by-step workflows you've learned and know have not. However, a new challenger has appeared. Declarative workflows upended the usual processes and even the languages all in the name of infrastructure as code. Human readable, plain text files can be interpreted by products like HashiCorp Terraform and RedHat Ansible to do the heavy lifting of the imperative process. The key is knowing when, how, and where to use each method within your VMware environment. Join Luc and Kyle for this session where they will discuss these different styles of automation, complete with practical examples that you can use in your own environment!
@@ -74,6 +84,8 @@ Speakers:
 Infrastructure as code is pushed as **the** way to create infrastructure, but there are two ways. The 'traditional' way where you code out each step of the process to get your end sate, or the 'new' way where you declare the end state and the tool figures out how to get there. This session looks like a good primer on each method, and should give you some tips on how to start your IaC journey.
 
 ### Deep Dive: Treating Security Like a Product [APP1436]
+
+Content Catalog Link: [APP1436](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=APP1436)
 
 Excerpt:
 
@@ -88,6 +100,8 @@ No matter what role you have in IT, security should be something you think about
 
 ### DevSecOps for Infrastructure – Adopting DevOps Practices for vSphere Admins [APP1842]
 
+Content Catalog Link: [APP1842](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=APP1842)
+
 Excerpt:
 
 > DevOps, SecOps, GitOps, infrastructure as code, continuous this and that—are they all just abstract buzzwords? Is it just a way to keep a handful full-stack developers happy, or are there lessons the rest of us can learn and put into practice? If you don't know your declarative from imperative, or the difference between mutability and idempotency, then this is the session for you. Gain strategic and practical insights on how you can apply the principles of DevSecOps and improve the reliability, security and efficiency of your infrastructure.
@@ -100,6 +114,8 @@ Speakers:
 I have some opions on DevOps which I wont; share on this post, but looking at the trends in IT Infrastructure people more and more need to be thinking like a developer. I personally find it hard to visualize how some DevOps principles can apply to me while setting up a vSphere cluster, I know the core principles of DevOps so I'm hoping for a more infrastructure slant on it from Sam and Lefteris.
 
 ### Introduction to Kubernetes for the vSphere Admin [APP2183]
+
+Content Catalog Link: [APP2183](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=APP2183)
 
 Excerpt:
 
@@ -115,6 +131,8 @@ I listen to a lot of podcasts and read a lot of blogs. At this point you can't g
 
 ### Live Coding: Terraforming Your vSphere Environment [CODE2755]
 
+Content Catalog Link: [CODE2755](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=CODE2755)
+
 Excerpt:
 
 > Infrastructure as code is the process of managing infrastructure in a file or a set of files rather than manually configuring resources in a user interface. This session is going to take a live look at how to make the process of getting starting with infrastructure as code in a VMware vSphere environment as easy as possible using HashiCorp Terraform, the de facto standard for infrastructure as code.
@@ -126,6 +144,8 @@ Speakers:
 Another Infrastructure as Code session I want to see. I really like Hashicorp tools like Terraform and Packer so I'm always interested to see sessions on them. Tools like Terraform are really easy to pick up and applying on even a simple home lab. Kyle is an excellent speaker and so I'm really excited about this session to further my knowledge.
 
 ### Place Your Cluster in a Desired State [CODE2752]
+
+Content Catalog Link: [CODE2752](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog?search=CODE2752)
 
 Excerpt:
 
@@ -140,3 +160,5 @@ Can you spot a pattern in my picks for sessions to attend? I suspect this sessio
 ### Wrap Up
 
 A leaning towards the Code sessions but to be honest they are so interesting. I am sure you will find something in this list that appeals to you, and if not spend some time browsing the [Content Catalog](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog) to find what interests you. With over 900 sessions I guarantee you will.
+
+Make sure you register for [VMworld here](https://bit.ly/3DbHgp3) so you don't miss any of the great content.
