@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "My Top 10 Sessions to see at VMworld 2021"
-# date: YYYY-MM-DD
+date: 2021-08-23
 category: [VMware]
 excerpt: "There are hundreds of sessions available at VMworld but what do I see as the Top 10 must see "
 ---
