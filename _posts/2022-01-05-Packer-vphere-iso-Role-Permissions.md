@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-title: "Packer vsphere-iso Role/Permissions"
+title: "Packer vsphere-iso Role"
 date: 2022-01-05
 category: [VMware]
 excerpt: "What privileges are required for Packer to build in vCenter and a lesson on security/simplicity"
