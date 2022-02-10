@@ -19,7 +19,7 @@ You can access the Repo at [cwestwater/packer-vsphere-iso](https://github.com/cw
 I'm not going to re-hash plenty of great content out there about Packer. I will however give you some great resources to learn:
 
 - [Stephan McTighe](https://twitter.com/vStephanMcTighe) did a great series of posts on [Getting Started with Packer to Create vSphere Templates](https://stephanmctighe.com/2021/06/15/getting-started-with-packer-to-create-vsphere-templates-part-1/)
-- [Troy Lindsay]https://twitter.com/troylindsay42) presented a great session at VMware Code 2020 called [CODE4234: Building VM Templates Programmatically with Packer with Troy Lindsay](https://youtu.be/mO0oeCAjeO8). Great video - I learnt a LOT from this video
+- [Troy Lindsay](https://twitter.com/troylindsay42) presented a great session at VMware Code 2020 called [CODE4234: Building VM Templates Programmatically with Packer with Troy Lindsay](https://youtu.be/mO0oeCAjeO8). Great video - I learnt a LOT from this video
 - [Michael Poore](https://twitter.com/mpoore) has an amazing [repo](https://github.com/v12n-io/packer) with some great builds for most common OS's
 - [HashiCorp Learn](https://learn.hashicorp.com/packer) has lots of great tutorials on Packer available
 
