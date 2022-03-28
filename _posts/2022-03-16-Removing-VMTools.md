@@ -29,7 +29,7 @@ Out of the box Windows Server 2022 comes with the VMware drivers pre-installed. 
 
 ## Testing Windows Server 2022
 
-With a fresh install of Windows Server 2022 it came packaged with the vmxnet3 driver v1.8.17.0. I then installed [VMware Tools v11.3.5](https://docs.vmware.com/en/VMware-Tools/11.3/rn/VMware-Tools-1135-Release-Notes.html) which updated the driver version to v1.9.2.0. Now at the time of this blog [VMware Tools v12.0.0](https://docs.vmware.com/en/VMware-Tools/11.3/rn/VMware-Tools-1135-Release-Notes.html) with vmxnet3 driver v1.9.5.0 was available. The reason for installing an older VMware Tools version is I wanted to use Windows Update to download and install vmxnet3 driver v1.9.5.0 without updating tools
+With a fresh install of Windows Server 2022 it came packaged with the vmxnet3 driver v1.8.17.0. I then installed [VMware Tools v11.3.5](https://docs.vmware.com/en/VMware-Tools/11.3/rn/VMware-Tools-1135-Release-Notes.html) which updated the driver version to v1.9.2.0. Now at the time of this blog [VMware Tools v12.0.0](https://docs.vmware.com/en/VMware-Tools/12.0/rn/VMware-Tools-1200-Release-Notes.html) with vmxnet3 driver v1.9.5.0 was available. The reason for installing an older VMware Tools version is I wanted to use Windows Update to download and install vmxnet3 driver v1.9.5.0 without updating tools
 
 I wanted to see if it made a difference if the vmxnet3 driver came from Microsoft via the OS or Windows Update versus installation via VMware Tools. Thus the path was:
 
