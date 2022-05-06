@@ -18,11 +18,11 @@ This post was written using VMware Workstation v16.2.3 running on Windows 10. I 
 
 First of all I copied one of the VMs across to the new PC and had a look at it's network configuration:
 
-![Missing LAN Segment]({{ site.url }}/assets/images/LAN-Segment-01.png)
+![Missing LAN Segment]({{ site.url }}/assets/images/lan-segment-01.png)
 
 Then clicking `LAN Segments...`:
 
-![Missing LAN Segment]({{ site.url }}/assets/images/LAN-Segment-02.png)
+![Missing LAN Segment]({{ site.url }}/assets/images/lan-segment-02.png)
 
 This confirms LAN Segments are part of the install - not baked into the OS. So where are LAN Segments defined?
 
@@ -57,11 +57,11 @@ In this case if you want to migrate your VMs and configuration it's very straigh
 
 As I said in the post above I messed up migrating the when migrating to the new computer. I had a lot of old VMs and LAN Segments that were no longer required so I wanted to start fresh. I copied over CentOS-01 and  created the LAN Segment that the VM used and thought I was good:
 
-![CentOS-01 LAN Segment]({{ site.url }}/assets/images/LAN-Segment-03.png)
+![CentOS-01 LAN Segment]({{ site.url }}/assets/images/lan-segment-03.png)
 
 As I had the correctly named LAN Segment I opened the properties of CentOS-02 to check:
 
-![CentOS-02 LAN Segment]({{ site.url }}/assets/images/LAN-Segment-04.png)
+![CentOS-02 LAN Segment]({{ site.url }}/assets/images/lan-segment-04.png)
 
 No LAN Segment showing in the VM properties. Remember the LAN Segment has a name and an ID. So looking at the VMs `.vmx` file it's expecting an ID of:
 
