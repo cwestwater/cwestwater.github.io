@@ -77,7 +77,7 @@ pref.namedPVNs0.pvnID = "52 65 f4 6a d1 c5 92 0e-2b c6 cf 54 96 dc 2c 73"
 
 Change the value in `preferences.ini` to match the value from the `.vmx`. Then looking at CentOS-02 we can now see:
 
-![CentOS-02 LAN Segment]({{ site.url }}/assets/images/LAN-Segment-05.png)
+![CentOS-02 LAN Segment]({{ site.url }}/assets/images/lan-segment-05.png)
 
 You can see the VM is now picking up the correct LAN Segment. This is fine when you have lots of VMs using the LAN Segment, but in this example I only had two VMs. Now as I changed the LAN Segment ID the VM CentOS-01 has lost the LAN segment. You need to change the VM properties to the 'correct' LAN Segment with the manually changed ID.
 
