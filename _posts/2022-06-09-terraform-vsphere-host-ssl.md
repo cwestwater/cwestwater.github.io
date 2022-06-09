@@ -4,7 +4,7 @@ classes: wide
 title: "Add ESXi Host to Cluster with Terraform"
 date: 2022-06-09
 category: [VMware,Terraform]
-excerpt: "How to add a host to a cluster in Terraform when using self-signed, untrusted certificates, a common home lab situation"
+excerpt: "How to add an ESXi host to a cluster using Terraform when using self-signed, untrusted certificates, a common home lab situation"
 ---
 ## Introduction
 
