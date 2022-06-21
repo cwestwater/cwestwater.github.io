@@ -66,7 +66,7 @@ Some examples could be:
 RVTools.exe -s vcsa.corp.contoso.com -passthrough -c ExportAll2xlsx
 
 # Connect to a vCenter using username/password authentication and export all tabs to csv to a file in C:\Temp\RVTools_export_YYYY-MM-DD_HH.MM.SS.xlsx
-RVTools.exe -s vcsa.corp.contoso.com -u adminsitrator@vsphere.local -p VMware1! -c ExportAll2csv -d C:\Temp
+RVTools.exe -s vcsa.corp.contoso.com -u administrator@vsphere.local -p VMware1! -c ExportAll2csv -d C:\Temp
 
 # Connect to a vCenter using pass-through authentication and export vInfo tab to xlsx to C:\Temp\vcsa1-vInfo.xlsx
 RVTools.exe -s vcsa.corp.contoso.com -passthrough -c ExportvInfo2xlsx -d C:\Temp -f vcsa1-vInfo.xlsx
