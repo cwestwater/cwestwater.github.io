@@ -4,7 +4,7 @@ classes: wide
 title: "Packer vmware-iso Template Import Issue"
 date: 2023-05-08
 category: [VMware]
-excerpt: "How to fix and issue when deploying a Windows Server 2022 template in VMware Workstation generated with Packer's vmware-iso plugin"
+excerpt: "How to fix an issue when deploying a Windows Server 2022 template in VMware Workstation generated with Packer's vmware-iso plugin"
 ---
 ## Introduction
 
