@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-title: "Packer vpshere-iso Windows Repo"
+title: "Packer vsphere-iso Windows Repo"
 date: 2022-02-10
 category: [VMware]
 excerpt: "My repo for using HashiCorp Packer to build vSphere Windows Templates"
